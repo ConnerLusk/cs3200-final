@@ -111,51 +111,6 @@ VALUES
    ('Crossword', 'Lotlux', 1),
    ('Crossword', 'Voltsillam', 2);
 
-
--- Insert into Game Attemp
-INSERT INTO GameAttempt (gameId, playerID, isInProgress, timeElapsed, score)
-VALUES (1, 1, false, 100, 19),
-      (1, 2, false, 200, 22),
-      (1, 3, false, 233, 12),
-      (1, 4, false, 219, 32),
-      (1, 5, true, 270, 42),
-      (1, 6, false, 300, 29),
-      (1, 7, true, 101, 34),
-      (1, 8, false, 90, 12),
-      (1, 9, true, 73, 13),
-      (1, 10, false, 10, 23),
-      (2, 1, false, 40, 12),
-      (2, 2, false, 43, 12),
-      (2, 3, true, 100, 43),
-      (2, 4, false, 219, 23),
-      (2, 5, false, 301, 63),
-      (2, 6, true, 20, 22),
-      (2, 7, false, 28, 4),
-      (2, 8, false, 31, 21),
-      (2, 9, false, 39, 13),
-      (2, 10, false, 15, 3),
-      (3, 1, true, 14, 3),
-      (3, 2, false, 58, 10),
-      (3, 3, false, 90, 23),
-      (3, 4, false, 36, 1),
-      (3, 5, false, 42, 11),
-      (3, 6, false, 59, 12),
-      (3, 7, false, 22, 23),
-      (3, 8, true, 67, 12),
-      (3, 9, false, 93, 1),
-      (3, 10, false, 13, 4),
-      (4, 1, false, 42, 23),
-      (4, 2, true, 104, 13),
-      (4, 3, false, 255, 45),
-      (4, 4, false, 30, 13),
-      (4, 5, true, 58, 11),
-      (4, 6, false, 27, 22),
-      (4, 7, false, 40, 24),
-      (4, 8, true, 42, 32),
-      (4, 9, false, 12, 6),
-      (4, 10, false, 9, 8);
-
-
 -- Insert into Tutor Session
 INSERT INTO TutorSession(sessionId,tutorId,playerId,hours,rate,totalPay,notes) VALUES (1,9,2,2.2,57,125.4,'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
 INSERT INTO TutorSession(sessionId,tutorId,playerId,hours,rate,totalPay,notes) VALUES (2,10,1,1.4,19,26.6,'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.');
