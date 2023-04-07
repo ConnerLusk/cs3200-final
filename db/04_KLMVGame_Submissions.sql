@@ -1,5 +1,5 @@
 USE KLMVGames;
-
+-- Insert into Submission
 INSERT INTO Submission (submissionNumber, attemptId, numIncorrect)
 VALUES (1, 1, 10),
        (2, 1, 0),
@@ -82,6 +82,7 @@ VALUES (1, 1, 10),
        (1, 40, 2),
        (2, 40, 0);
 
+-- Insert into Guesses
 INSERT INTO Guesses (submissionNumber, attemptId, valueRow, valueColumn, charValue)
 VALUES (2, 1, 0, 3, 'x'),
        (2, 1, 1, 3, 'x'),
