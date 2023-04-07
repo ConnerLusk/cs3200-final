@@ -17,7 +17,7 @@ CREATE TABLE Tutor
 CREATE TABLE Department
 (
     departmentID INTEGER AUTO_INCREMENT NOT NULL,
-    budget       BIGINT                 NOT NULL,
+    budget       FLOAT                 NOT NULL,
     descrip      TEXT,
     PRIMARY KEY (departmentID)
 );
@@ -133,7 +133,7 @@ CREATE TABLE BackgroundCheck
     isFelon       BOOLEAN NOT NULL,
     isAdaEligible BOOLEAN,
     isVeteran     BOOLEAN,
-    SSN           VARCHAR(10) UNIQUE,
+    SSN           VARCHAR(11) UNIQUE,
     PRIMARY KEY (employeeId),
     CONSTRAINT FOREIGN KEY (employeeId) REFERENCES Engineer (employeeId) ON UPDATE CASCADE
 );
@@ -156,18 +156,6 @@ CREATE TABLE Answers
     valueColumn INTEGER      NOT NULL,
     charValue   CHAR(1),
     PRIMARY KEY (gameId, gameName, valueRow, valueColumn),
-    CONSTRAINT FOREIGN KEY (gameId) REFERENCES Game (gameId) ON UPDATE CASCADE ON DELETE CASCADE,
-    CONSTRAINT FOREIGN KEY (gameName) REFERENCES Game (gameName) ON UPDATE CASCADE ON DELETE CASCADE
-);
-
-CREATE TABLE Hints
-(
-    hint        VARCHAR(100) NOT NULL UNIQUE,
-    gameId      INTEGER      NOT NULL,
-    gameName    VARCHAR(100) NOT NULL,
-    valueRow    INTEGER      NOT NULL,
-    valueColumn INTEGER      NOT NULL,
-    PRIMARY KEY (hint),
     CONSTRAINT FOREIGN KEY (gameId) REFERENCES Game (gameId) ON UPDATE CASCADE ON DELETE CASCADE,
     CONSTRAINT FOREIGN KEY (gameName) REFERENCES Game (gameName) ON UPDATE CASCADE ON DELETE CASCADE
 );

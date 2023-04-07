@@ -1,3 +1,5 @@
+USE KLMVGames;
+
 # CROSSWORD 1
 INSERT INTO Clues (gameId, valueRow, valueColumn, clue, isDown)
 VALUES
