@@ -8,28 +8,28 @@ Connor: submission, guesses, game type, game, answers
 
  */
 -- Insert into Player
-INSERT INTO Player(playerId,isPremium,f_name,l_name,email,birthday) VALUES (1,false,'Gunther','Hatzar','ghatzar0@usa.gov','1990-11-12');
-INSERT INTO Player(playerId,isPremium,f_name,l_name,email,birthday) VALUES (2,true,'Kelley','Helkin','khelkin1@webmd.com','1990-11-12');
-INSERT INTO Player(playerId,isPremium,f_name,l_name,email,birthday) VALUES (3,true,'Lazarus','Gauden','lgauden2@prnewswire.com','1990-11-12');
-INSERT INTO Player(playerId,isPremium,f_name,l_name,email,birthday) VALUES (4,true,'Patience','Godmer','pgodmer3@wix.com','1990-11-12');
-INSERT INTO Player(playerId,isPremium,f_name,l_name,email,birthday) VALUES (5,true,'Penni','Cohn','pcohn4@altervista.org','1990-11-12');
-INSERT INTO Player(playerId,isPremium,f_name,l_name,email,birthday) VALUES (6,true,'Royall','Lordon','rlordon5@joomla.org','1990-11-12');
-INSERT INTO Player(playerId,isPremium,f_name,l_name,email,birthday) VALUES (7,false,'Marget','Boddis','mboddis6@geocities.jp','1990-11-12');
-INSERT INTO Player(playerId,isPremium,f_name,l_name,email,birthday) VALUES (8,false,'Eirena','Scholtz','escholtz7@yale.edu','1990-11-12');
-INSERT INTO Player(playerId,isPremium,f_name,l_name,email,birthday) VALUES (9,true,'Marabel','Saffin','msaffin8@ameblo.jp','1990-11-12');
-INSERT INTO Player(playerId,isPremium,f_name,l_name,email,birthday) VALUES (10,false,'Cory','Jedrzejewski','cjedrzejewski9@godaddy.com','1990-11-12');
+INSERT INTO Player(playerId,isPremium,fName,lName,email,birthday) VALUES (1,false,'Gunther','Hatzar','ghatzar0@usa.gov','1990-11-12');
+INSERT INTO Player(playerId,isPremium,fName,lName,email,birthday) VALUES (2,true,'Kelley','Helkin','khelkin1@webmd.com','1990-11-12');
+INSERT INTO Player(playerId,isPremium,fName,lName,email,birthday) VALUES (3,true,'Lazarus','Gauden','lgauden2@prnewswire.com','1990-11-12');
+INSERT INTO Player(playerId,isPremium,fName,lName,email,birthday) VALUES (4,true,'Patience','Godmer','pgodmer3@wix.com','1990-11-12');
+INSERT INTO Player(playerId,isPremium,fName,lName,email,birthday) VALUES (5,true,'Penni','Cohn','pcohn4@altervista.org','1990-11-12');
+INSERT INTO Player(playerId,isPremium,fName,lName,email,birthday) VALUES (6,true,'Royall','Lordon','rlordon5@joomla.org','1990-11-12');
+INSERT INTO Player(playerId,isPremium,fName,lName,email,birthday) VALUES (7,false,'Marget','Boddis','mboddis6@geocities.jp','1990-11-12');
+INSERT INTO Player(playerId,isPremium,fName,lName,email,birthday) VALUES (8,false,'Eirena','Scholtz','escholtz7@yale.edu','1990-11-12');
+INSERT INTO Player(playerId,isPremium,fName,lName,email,birthday) VALUES (9,true,'Marabel','Saffin','msaffin8@ameblo.jp','1990-11-12');
+INSERT INTO Player(playerId,isPremium,fName,lName,email,birthday) VALUES (10,false,'Cory','Jedrzejewski','cjedrzejewski9@godaddy.com','1990-11-12');
 
 -- Insert into Tutor
-INSERT INTO Tutor(tutorId,f_name,l_name,email,background,skill) VALUES (1,'Mason','Folcarelli','mfolcarelli0@aboutads.info','Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.',5);
-INSERT INTO Tutor(tutorId,f_name,l_name,email,background,skill) VALUES (2,'Farley','Cobbing','fcobbing1@dedecms.com','Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.',1);
-INSERT INTO Tutor(tutorId,f_name,l_name,email,background,skill) VALUES (3,'Martyn','Blazevic','mblazevic2@psu.edu','In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',2);
-INSERT INTO Tutor(tutorId,f_name,l_name,email,background,skill) VALUES (4,'Hugo','Fraczak','hfraczak3@liveinternet.ru','Sed ante. Vivamus tortor. Duis mattis egestas metus.',0);
-INSERT INTO Tutor(tutorId,f_name,l_name,email,background,skill) VALUES (5,'Fred','Soggee','fsoggee4@zimbio.com','Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',2);
-INSERT INTO Tutor(tutorId,f_name,l_name,email,background,skill) VALUES (6,'Beck','Sheirlaw','bsheirlaw5@slideshare.net','In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.',5);
-INSERT INTO Tutor(tutorId,f_name,l_name,email,background,skill) VALUES (7,'Conchita','Grumell','cgrumell6@hao123.com','Phasellus in felis. Donec semper sapien a libero. Nam dui.',4);
-INSERT INTO Tutor(tutorId,f_name,l_name,email,background,skill) VALUES (8,'Melodee','Conrard','mconrard7@cnn.com','Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.',5);
-INSERT INTO Tutor(tutorId,f_name,l_name,email,background,skill) VALUES (9,'Devonna','Cassley','dcassley8@barnesandnoble.com','Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',5);
-INSERT INTO Tutor(tutorId,f_name,l_name,email,background,skill) VALUES (10,'Ruy','Evanson','revanson9@sina.com.cn','Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.',1);
+INSERT INTO Tutor(tutorId,fName,lName,email,background,skill) VALUES (1,'Mason','Folcarelli','mfolcarelli0@aboutads.info','Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.',5);
+INSERT INTO Tutor(tutorId,fName,lName,email,background,skill) VALUES (2,'Farley','Cobbing','fcobbing1@dedecms.com','Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.',1);
+INSERT INTO Tutor(tutorId,fName,lName,email,background,skill) VALUES (3,'Martyn','Blazevic','mblazevic2@psu.edu','In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',2);
+INSERT INTO Tutor(tutorId,fName,lName,email,background,skill) VALUES (4,'Hugo','Fraczak','hfraczak3@liveinternet.ru','Sed ante. Vivamus tortor. Duis mattis egestas metus.',0);
+INSERT INTO Tutor(tutorId,fName,lName,email,background,skill) VALUES (5,'Fred','Soggee','fsoggee4@zimbio.com','Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',2);
+INSERT INTO Tutor(tutorId,fName,lName,email,background,skill) VALUES (6,'Beck','Sheirlaw','bsheirlaw5@slideshare.net','In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.',5);
+INSERT INTO Tutor(tutorId,fName,lName,email,background,skill) VALUES (7,'Conchita','Grumell','cgrumell6@hao123.com','Phasellus in felis. Donec semper sapien a libero. Nam dui.',4);
+INSERT INTO Tutor(tutorId,fName,lName,email,background,skill) VALUES (8,'Melodee','Conrard','mconrard7@cnn.com','Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.',5);
+INSERT INTO Tutor(tutorId,fName,lName,email,background,skill) VALUES (9,'Devonna','Cassley','dcassley8@barnesandnoble.com','Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',5);
+INSERT INTO Tutor(tutorId,fName,lName,email,background,skill) VALUES (10,'Ruy','Evanson','revanson9@sina.com.cn','Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.',1);
 
 -- Insert into Tutor Session
 INSERT INTO TutorSession(sessionId,tutorId,playerId,hours,rate,totalPay,notes) VALUES (1,9,2,2.2,57,125.4,'Sed ante. Vivamus tortor. Duis mattis egestas metus.');
