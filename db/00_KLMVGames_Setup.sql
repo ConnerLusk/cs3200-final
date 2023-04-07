@@ -1,15 +1,14 @@
 DROP DATABASE IF EXISTS `KLMVGames`;
-
 CREATE DATABASE KLMVGames;
 USE KLMVGames;
 
 CREATE TABLE Tutor
 (
-    tutorID   INTEGER AUTO_INCREMENT NOT NULL,
+    tutorID    INTEGER AUTO_INCREMENT NOT NULL,
     fName     VARCHAR(50)            NOT NULL,
     lName     VARCHAR(50)            NOT NULL,
     email      VARCHAR(50)            NOT NULL,
-    background VARCHAR(255),
+    background VARCHAR(255), 
     skill      INTEGER,
     PRIMARY KEY (tutorID),
     CONSTRAINT skill CHECK (skill BETWEEN 0 AND 5)
@@ -27,8 +26,8 @@ CREATE TABLE Player
 (
     playerID  INTEGER AUTO_INCREMENT NOT NULL,
     isPremium BOOLEAN                NOT NULL,
-    f_name    VARCHAR(50)            NOT NULL,
-    l_name    VARCHAR(50)            NOT NULL,
+    fName    VARCHAR(50)            NOT NULL,
+    lName    VARCHAR(50)            NOT NULL,
     email     VARCHAR(50)            NOT NULL,
     birthday  DATE,
     PRIMARY KEY (playerID)
@@ -57,8 +56,8 @@ CREATE TABLE Engineer
     projectCodeName VARCHAR(50)            NOT NULL,
     departmentID    INTEGER                NOT NULL,
     title           VARCHAR(50),
-    f_name          VARCHAR(50)            NOT NULL,
-    l_name          VARCHAR(50)            NOT NULL,
+    fName          VARCHAR(50)            NOT NULL,
+    lName          VARCHAR(50)            NOT NULL,
     salary          INTEGER                NOT NULL,
     PRIMARY KEY (employeeId),
     CONSTRAINT FOREIGN KEY (projectCodeName) REFERENCES Project (projectCodeName) ON UPDATE CASCADE ON DELETE CASCADE,
@@ -69,7 +68,7 @@ CREATE TABLE Engineer
 CREATE TABLE Game
 (
     gameId          INTEGER AUTO_INCREMENT NOT NULL,
-    gameName        VARCHAR(100)           NOT NULL UNIQUE,
+    gameName        VARCHAR(50)           NOT NULL,
     projectCodeName VARCHAR(50)            NOT NULL,
     difficulty      INTEGER,
     PRIMARY KEY (gameId, gameName),
@@ -86,7 +85,7 @@ CREATE TABLE GameAttempt
     isInProgress BOOLEAN                NOT NULL,
     timeElapsed  BIGINT                 NOT NULL,
     score        INT,
-    dateStarted  DATETIME               NOT NULL,
+    dateStarted  DATETIME               Default CURRENT_TIMESTAMP NOT NULL,
     PRIMARY KEY (attemptId),
     CONSTRAINT FOREIGN KEY (gameId) REFERENCES Game (gameId) ON UPDATE CASCADE ON DELETE RESTRICT,
     CONSTRAINT FOREIGN KEY (playerID) REFERENCES Player (playerID) ON UPDATE CASCADE ON DELETE CASCADE
@@ -95,8 +94,8 @@ CREATE TABLE GameAttempt
 CREATE TABLE TutorSession
 (
     sessionID INTEGER AUTO_INCREMENT NOT NULL,
-    tutorID   INTEGER                NOT NULL UNIQUE,
-    playerID  INTEGER                NOT NULL UNIQUE,
+    tutorID   INTEGER                NOT NULL,
+    playerID  INTEGER                NOT NULL,
     hours     INT                    NOT NULL,
     rate      FLOAT                  NOT NULL,
     totalPay  FLOAT                  NOT NULL,
@@ -104,13 +103,12 @@ CREATE TABLE TutorSession
     PRIMARY KEY (sessionID, tutorID),
     CONSTRAINT FOREIGN KEY (tutorID) REFERENCES Tutor (tutorID) ON UPDATE CASCADE ON DELETE CASCADE,
     CONSTRAINT FOREIGN KEY (playerID) REFERENCES Player (playerID) ON UPDATE CASCADE ON DELETE CASCADE
-
 );
 
 CREATE TABLE Submission
 (
     submissionNumber INTEGER NOT NULL,
-    attemptId        INTEGER NOT NULL UNIQUE,
+    attemptId        INTEGER NOT NULL,
     numIncorrect     INTEGER NOT NULL,
     PRIMARY KEY (attemptId, submissionNumber),
     CONSTRAINT FOREIGN KEY (attemptId) REFERENCES GameAttempt (attemptId) ON UPDATE CASCADE ON DELETE CASCADE
@@ -124,7 +122,7 @@ CREATE TABLE Guesses
     valueRow         INTEGER NOT NULL,
     valueColumn      INTEGER NOT NULL,
     charValue        CHAR(1),
-    PRIMARY KEY (attemptId, valueRow, valueColumn),
+    PRIMARY KEY (attemptId, submissionNumber, valueRow, valueColumn),
     CONSTRAINT FOREIGN KEY (attemptId, submissionNumber) REFERENCES Submission (attemptId, submissionNumber) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
