@@ -48,8 +48,8 @@ services:
     # file as well. 
     environment:
       MYSQL_USER: webapp
-      MYSQL_PASSWORD_FILE: /run/secrets/secret_db_pw
-      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/secret_db_root_pw
+      MYSQL_PASSWORD_FILE: /run/secrets/db_password
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/secret_db_root
     
     secrets:
       - secret_db_pw
@@ -61,7 +61,7 @@ services:
     image: index.docker.io/appsmith/appsmith-ce
     container_name: appsmith
     ports:
-      - "8080:80"
+      - "9000:80"
       - "4443:443"
     volumes:
       - ./stacks:/appsmith-stacks
