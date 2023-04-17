@@ -1,6 +1,8 @@
 from flask import Blueprint, request, jsonify, make_response
 import json
 from src import db
+from utils import cursor_to_json
+from utils import  submit_query
 
 
 players = Blueprint('players', __name__)
@@ -8,37 +10,52 @@ players = Blueprint('players', __name__)
 # Get all players from the DB
 @players.route('/players', methods=['GET'])
 def get_players():
-    cursor = db.get_db().cursor()
-    cursor.execute('SELECT fname, lname FROM Player;')
-    row_headers = [x[0] for x in cursor.description]
-    json_data = []
-    theData = cursor.fetchall()
-    for row in theData:
-        json_data.append(dict(zip(row_headers, row)))
-    the_response = make_response(jsonify(json_data))
-    the_response.status_code = 200
-    the_response.mimetype = 'application/json'
-    return the_response
+    query = 'SELECT fname, lname FROM Player;'
+    return cursor_to_json(query)
 
-# Get player details for players with particular playerID
-@players.route('/players/<playerID>', methods=['GET'])
+# Delete, fetch, or update a specific player
+@players.route('/players/<playerID>', methods= ['GET','POST','PUT','DELETE'])
 def get_player(playerID):
-    cursor = db.get_db().cursor()
-    cursor.execute('SELECT * FROM Player where playerID = {0}'.format(playerID))
-    row_headers = [x[0] for x in cursor.description]
-    json_data = []
-    theData = cursor.fetchall()
-    for row in theData:
-        json_data.append(dict(zip(row_headers, row)))
-    the_response = make_response(jsonify(json_data))
-    the_response.status_code = 200
-    the_response.mimetype = 'application/json'
-    return the_response
-\
-# delete a player 
-@players.route('/players/<playerID>', methods=['DELETE'])
-def delete_player(playerID):
-    cursor = db.get_db().cursor()
-    cursor.execute('Delete * FROM Player where playerID = {0}'.format(playerID))
-    
-    return 'deleted'
+    if request.method == "GET":
+        query = 'SELECT * FROM Player where playerID = {0};'.format(playerID)
+        return cursor_to_json(query)
+    elif request.method == "POST":
+
+        the_data = request.json
+
+        premium = the_data['isPremium']
+        fname = the_data['fName']
+        lname = the_data['lName']
+        email = the_data['email']
+        birthday = the_data['birthday']
+
+        query = 'INSERT into Player (isPremium, fName, lName, email, birthday) values ('
+        query += str(premium) + ","
+        query += fname + ","
+        query += lname + ","
+        query += email + ","
+        query += str(birthday) + ');'
+
+        return submit_query(query, "Inserted")
+  
+    elif request.method == "PUT":
+        the_data = request.json
+
+        premium = the_data['isPremium']
+        fname = the_data['fName']
+        lname = the_data['lName']
+        email = the_data['email']
+        birthday = the_data['birthday']
+
+        # generate query
+        query = f"UPDATE Player SET isPremium = '{str(premium)}',"
+        query += f" fName = '{fname}', lname = '{lname}', email = {email}, birthday = '{str(birthday)}';"
+        
+        return submit_query(query, "Updated")
+  
+    elif request.method == "DELETE":
+
+        query = 'Delete FROM Player where playerID = {0};'.format(playerID)
+        return submit_query(query, "Deleted")
+
+
