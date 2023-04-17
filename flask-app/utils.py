@@ -1,4 +1,5 @@
 from flask import jsonify
+from src import db
 
 def cursor_to_json(cursor):
     column_headers = [x[0] for x in cursor.description]
@@ -15,3 +16,9 @@ def cursor_to_json(cursor):
         json_data.append(dict(zip(column_headers, row)))
     
     return jsonify(json_data)
+
+def submit_query(query, message):
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+    db.get_db().commit()
+    return message

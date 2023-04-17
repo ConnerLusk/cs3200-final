@@ -37,6 +37,7 @@ def create_app():
     from src.players.players import players
     from src.gameAttempt.gameAttempt  import gameAttempt
     from src.answers.answers import answers
+    from src.clues.clues import clues
 
     # Register the routes that we just imported so they can be properly handled
     app.register_blueprint(views,       url_prefix='/v')
@@ -46,5 +47,6 @@ def create_app():
     app.register_blueprint(products,    url_prefix='/pr')
     app.register_blueprint(gameAttempt,    url_prefix='/ga')
     app.register_blueprint(answers,    url_prefix='/a')
+    app.register_blueprint(clues,    url_prefix='/cl')
 
     return app
