@@ -1,24 +1,31 @@
-from flask import jsonify
+from flask import jsonify, make_response,render_template
 from src import db
 
-def cursor_to_json(cursor):
-    column_headers = [x[0] for x in cursor.description]
-    # create an empty dictionary object to use in 
-    # putting column headers together with data
-    json_data = []
-
-    # fetch all the data from the cursor
-    theData = cursor.fetchall()
-
-    # for each of the rows, zip the data elements together with
-    # the column headers. 
-    for row in theData:
-        json_data.append(dict(zip(column_headers, row)))
-    
-    return jsonify(json_data)
-
-def submit_query(query, message):
+def cursor_to_json(query):
     cursor = db.get_db().cursor()
     cursor.execute(query)
-    db.get_db().commit()
-    return message
+
+    column_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+
+    for row in theData:
+        json_data.append(dict(zip(column_headers, row)))
+
+    the_response = make_response(jsonify(json_data))
+    the_response.status_code = 200
+    the_response.mimetype = 'application/json'
+    return the_response
+
+def submit_query(query, message):
+    try:
+        cursor = db.get_db().cursor()
+        cursor.execute(query)
+        db.get_db().commit()
+        myResponse = make_response(message)
+        myResponse.status_code = 200
+        return myResponse
+    except:
+        myResponse = make_response("Error")
+        myResponse.status_code = 400
+        return myResponse
