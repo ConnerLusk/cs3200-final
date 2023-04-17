@@ -75,13 +75,13 @@ def get_player_game_submission_num(playerId, gameId, submissionNumber):
     query = f'''
     SELECT GA.attemptId, Submission.submissionNumber, numIncorrect
     FROM Submission JOIN GameAttempt GA on Submission.attemptId = GA.attemptId
-    where playerId = {playerId} AND gameId = {gameId} AND submissionNumber = {submissionNumber};
+    WHERE playerId = {playerId} AND gameId = {gameId} AND submissionNumber = {submissionNumber};
     '''
+    cursor.execute(query)
 
     #column headers data
     column_headers = [x[0] for x in cursor.description]
 
-    cursor.execute(query)
 
     # putting column headers together with data
     json_data = []
