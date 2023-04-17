@@ -5,7 +5,7 @@ from utils import cursor_to_json, submit_query
 guesses = Blueprint('guesses', __name__)
 
 @guesses.route('/', methods=['GET'])
-def guesses():
+def guessess():
     return cursor_to_json("SELECT * FROM Guesses")
 
 
