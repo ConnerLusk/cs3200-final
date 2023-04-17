@@ -31,22 +31,25 @@ def create_app():
 
     # Import the various routes
     from src.views import views
-    from src.customers.customers import customers
-    from src.products.products  import products
     from src.submission.submission  import submission
     from src.players.players import players
     from src.gameAttempt.gameAttempt  import gameAttempt
     from src.answers.answers import answers
     from src.clues.clues import clues
+    from src.gameTypes.gameTypes import gameType
+    from src.games.games import games
+    from src.guesses.guesses import guesses
 
     # Register the routes that we just imported so they can be properly handled
     app.register_blueprint(views,       url_prefix='/v')
-    app.register_blueprint(customers,   url_prefix='/c')
     app.register_blueprint(submission,    url_prefix='/s')
     app.register_blueprint(players, url_prefix= '/pl' )
-    app.register_blueprint(products,    url_prefix='/pr')
     app.register_blueprint(gameAttempt,    url_prefix='/ga')
     app.register_blueprint(answers,    url_prefix='/a')
     app.register_blueprint(clues,    url_prefix='/cl')
+    app.register_blueprint(gameType,    url_prefix='/gt')
+    app.register_blueprint(games,    url_prefix='/g')
+    app.register_blueprint(guesses,    url_prefix='/gu')
+
 
     return app
