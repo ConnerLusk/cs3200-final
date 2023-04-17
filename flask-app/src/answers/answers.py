@@ -11,11 +11,8 @@ answers = Blueprint('answers', __name__)
 def get_all_answers(gameId):
     # get a cursor object from the database
     cursor = db.get_db().cursor()
-
-    # use cursor to get all answers from the database
-    cursor.execute(f'SELECT * FROM Answers WHERE gameId = {gameId}')
     
-    return cursor_to_json(cursor)
+    return cursor_to_json(f'SELECT * FROM Answers WHERE gameId = {gameId}')
 
 
 @answers.route('/answers/<gameId>', methods=['DELETE'])
@@ -35,10 +32,8 @@ def get_answer(gameId, ValueRow, ValueColumn):
     # get a cursor object from the database
     cursor = db.get_db().cursor()
 
-    # use cursor to query the database for an answer
-    cursor.execute(f'SELECT * FROM Answers WHERE gameId = {gameId} and ValueRow = {ValueRow} and {ValueColumn}')
-    
-    return cursor_to_json(cursor)
+    # use cursor to query the database for an answer   
+    return cursor_to_json(f'SELECT * FROM Answers WHERE gameId = {gameId} and ValueRow = {ValueRow} and {ValueColumn}')
 
 
 @answers.route('/answers/<gameId>/<ValueRow>/<ValueColumn>', methods=['POST'])
