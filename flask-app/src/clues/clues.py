@@ -1,25 +1,25 @@
 from flask import Blueprint, request, jsonify, make_response, current_app
 import json
 from src import db
-from utils import cursor_to_json, submit_query
+from utils import submit_query, submit_query
 
 clues = Blueprint('clues', __name__)
 
 # Get all customers from the DB
 @clues.route('/clues', methods=['GET'])
 def get_clues():
-    return cursor_to_json("SELECT * FROM Clues;")
+    return submit_query("SELECT * FROM Clues;")
 
 # Get all customers from the DB
 @clues.route('/clues/<gameId>', methods=['GET'])
 def get_clues_from_game(gameId):
-    return cursor_to_json("f'SELECT valueRow, valueColumn, clue, isDown FROM Clues WHERE gameId = {gameId};'")
+    return submit_query(f"SELECT valueRow, valueColumn, clue, isDown FROM Clues WHERE gameId = {gameId};")
 
 @clues.route('/clues/<gameId>/<valueRow>/<valueColumn>', methods=['GET',"PUT","POST","DELETE"])
 def get_clue_from_game(gameId,valueRow,valueColumn):
     if request.method == "GET":
-        return cursor_to_json("'SELECT valueRow, valueColumn, clue, isDown FROM Clues WHERE gameId = {gameId}\
-                       AND valueRow = {valueRow} AND valueColumn = {valueColumn};'")
+        return submit_query(f"SELECT valueRow, valueColumn, clue, isDown FROM Clues WHERE gameId = {gameId}\
+                       AND valueRow = {valueRow} AND valueColumn = {valueColumn};")
     elif request.method == "POST":
         data = request.json
         query = f"INSERT INTO Clues (gameId, valueRow, valueColumn, clue, isDown) VALUES ({gameId},\
