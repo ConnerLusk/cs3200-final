@@ -17,7 +17,7 @@ def get_clue_from_game(gameId,valueRow,valueColumn):
                        AND valueRow = {valueRow} AND valueColumn = {valueColumn};")
     elif request.method == "POST":
         data = request.json
-        query = f"REPLACE INTO Clues (gameId, valueRow, valueColumn, clue, isDown) VALUES ({gameId}, {data['valueRow']}, {data['valueColumn']},\
+        query = f"REPLACE INTO Clues (gameId, valueRow, valueColumn, clue, isDown) VALUES ({gameId}, {valueRow}, {valueColumn},\
             '{data['clue']}, {data['isDown']}');"
         
         return submit_query(query, "Inserted")
