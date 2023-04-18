@@ -1,4 +1,4 @@
-from flask import jsonify, make_response, current_app
+from flask import make_response
 from src import db
 
 def get_query(query):
@@ -11,8 +11,6 @@ def get_query(query):
 
     for row in theData:
         json_data.append(dict(zip(column_headers, row)))
-
-    data = {"data": json_data}
 
     the_response = make_response(json_data)
     the_response.status_code = 200

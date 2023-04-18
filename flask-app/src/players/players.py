@@ -1,8 +1,5 @@
-from flask import Blueprint, request, jsonify, make_response
-import json
-from src import db
-from utils import cursor_to_json
-from utils import  submit_query
+from flask import Blueprint, request
+from utils import get_query, submit_query
 
 
 players = Blueprint('players', __name__)
@@ -11,14 +8,14 @@ players = Blueprint('players', __name__)
 @players.route('/players', methods=['GET'])
 def get_players():
     query = 'SELECT fname, lname FROM Player;'
-    return cursor_to_json(query)
+    return get_query(query)
 
 # Delete, fetch, or update a specific player
 @players.route('/players/<playerID>', methods= ['GET','POST','PUT','DELETE'])
 def get_player(playerID):
     if request.method == "GET":
         query = 'SELECT * FROM Player where playerID = {0};'.format(playerID)
-        return cursor_to_json(query)
+        return get_query(query)
     elif request.method == "POST":
 
         the_data = request.json
