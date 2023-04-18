@@ -29,7 +29,7 @@ def get_player_game_submission_num(playerId, gameId, submissionNumber):
     query = f'''
     SELECT GA.attemptId, Submission.submissionNumber, numIncorrect
     FROM Submission JOIN GameAttempt GA on Submission.attemptId = GA.attemptId
-    where playerId = {playerId} AND gameId = {gameId} AND submissionNumber = {submissionNumber};
+    WHERE playerId = {playerId} AND gameId = {gameId} AND submissionNumber = {submissionNumber};
     '''
     return get_query(query)
 

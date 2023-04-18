@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify, make_response, current_app
 import json
 from src import db
-from utils import submit_query, submit_query
+from utils import submit_query, cursor_to_json
 
 clues = Blueprint('clues', __name__)
 
@@ -13,12 +13,12 @@ def get_clues():
 # Get all customers from the DB
 @clues.route('/clues/<gameId>', methods=['GET'])
 def get_clues_from_game(gameId):
-    return submit_query(f"SELECT valueRow, valueColumn, clue, isDown FROM Clues WHERE gameId = {gameId};")
+    return cursor_to_json(f"SELECT valueRow, valueColumn, clue, isDown FROM Clues WHERE gameId = {gameId};")
 
 @clues.route('/clues/<gameId>/<valueRow>/<valueColumn>', methods=['GET',"PUT","POST","DELETE"])
 def get_clue_from_game(gameId,valueRow,valueColumn):
     if request.method == "GET":
-        return submit_query(f"SELECT valueRow, valueColumn, clue, isDown FROM Clues WHERE gameId = {gameId}\
+        return cursor_to_json(f"SELECT valueRow, valueColumn, clue, isDown FROM Clues WHERE gameId = {gameId}\
                        AND valueRow = {valueRow} AND valueColumn = {valueColumn};")
     elif request.method == "POST":
         data = request.json
