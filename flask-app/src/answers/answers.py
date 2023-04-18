@@ -22,8 +22,6 @@ def specific_answer(gameId, ValueRow, ValueColumn):
 
         gameId = the_data["gameId"]
         gameName = the_data["gameName"]
-        ValueRow = the_data["valueRow"]
-        ValueColumn = the_data["valueColumn"]
         charValue = the_data["charValue"]
 
 
@@ -38,7 +36,7 @@ def specific_answer(gameId, ValueRow, ValueColumn):
         query = f'DELETE FROM Answers WHERE gameId = {gameId} and valueRow = {ValueRow} and valueColumn = {ValueColumn};'
         return submit_query(query, "Deleted")
     
-@answers.route('/answers/bulk/<gameId>/<gameName>', methods=['POST'])
+@answers.route('/answers/bulk/<gameId>/<gameName>', methods=['PUT'])
 def bulkAdd(gameId,gameName):
     data = request.json
     charVals = data["answers"]
@@ -48,4 +46,4 @@ def bulkAdd(gameId,gameName):
             row = math.floor(i/5)
             col = i % 5
             query.append(f"REPLACE INTO Answers (gameId, gameName, valueRow, valueColumn, charValue) VALUES ({gameId}, '{gameName}',{row},{col},'{val}');")
-    return bulk_submit_query(query, "Inserted")
+    return bulk_submit_query(query, "Updated")

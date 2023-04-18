@@ -7,9 +7,6 @@ games = Blueprint('game', __name__)
 def game_name(name):
     if request.method == 'GET':
         return get_query(f"SELECT * FROM Game WHERE gameName = '{name}';")
-    elif request.method == 'DELETE':
-        query = f"DELETE FROM GAME WHERE gameName = '{name}';"
-        return submit_query(query, "Deleted")
     
 @games.route('/game/<name>/<difficulty>/<projName>', methods=['GET','POST'])
 def specific_game(name,difficulty,projName):

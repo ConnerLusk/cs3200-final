@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "_id": "dec33043-4fc7-4ce9-a643-b7e5f08cf7ba",
+    "colName": "Submissions",
+    "created": "2023-04-18T22:34:09.248Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "colName": "Guesses",
+    "created": "2023-04-18T22:45:05.009Z",
+    "sortNum": 20000,
+    "folders": []
+  },
+  {
+    "_id": "6a5cdb01-a37b-4902-b9dc-db8d47272ef5",
+    "colName": "Game Type",
+    "created": "2023-04-18T22:54:12.456Z",
+    "sortNum": 30000,
+    "folders": []
+  },
+  {
+    "_id": "c41d8994-2251-44e0-9680-93c9be65e6ae",
+    "colName": "Game",
+    "created": "2023-04-18T22:55:35.489Z",
+    "sortNum": 40000,
+    "folders": []
+  },
+  {
+    "_id": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "colName": "Game Attempt",
+    "created": "2023-04-18T23:02:35.437Z",
+    "sortNum": 50000,
+    "folders": []
+  },
+  {
+    "_id": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "colName": "Clues",
+    "created": "2023-04-18T23:10:07.931Z",
+    "sortNum": 60000,
+    "folders": []
+  },
+  {
+    "_id": "66a0cb54-d875-4210-959c-805d64409299",
+    "colName": "Answers",
+    "created": "2023-04-18T23:18:15.680Z",
+    "sortNum": 70000,
+    "folders": []
+  }
+]
