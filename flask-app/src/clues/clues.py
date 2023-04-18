@@ -35,3 +35,10 @@ def get_clue_from_game(gameId,valueRow,valueColumn):
         query = f"DELETE FROM Clues WHERE gameId = {gameId} and valueRow = {valueRow} and\
               valueColumn = {valueColumn};"
         return submit_query(query, "Deleted")
+    
+
+
+
+
+{"charValue":"f","gameId":2,"gameName":"Crossword","valueColumn":1,"valueRow":0}
+[{"charValue":"f","gameId":2,"gameName":"Crossword","valueColumn":1,"valueRow":0}]

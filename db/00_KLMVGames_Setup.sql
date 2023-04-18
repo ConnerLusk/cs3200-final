@@ -170,8 +170,3 @@ CREATE TABLE Clues
     PRIMARY KEY (gameID, valueRow, valueColumn, isDown),
     CONSTRAINT FOREIGN KEY (gameId) REFERENCES Game (gameId) ON UPDATE CASCADE ON DELETE CASCADE
 );
-
-# SELECT AttemptId, submissionNumber, numIncorrect
-# FROM Submission JOIN GameAttempt GA on Submission.attemptId = GA.attemptId
-# where playerId = {playerId} and gameId = {gameId};
-

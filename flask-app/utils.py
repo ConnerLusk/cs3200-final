@@ -1,7 +1,7 @@
-from flask import jsonify, make_response,render_template
+from flask import jsonify, make_response, current_app
 from src import db
 
-def cursor_to_json(query):
+def get_query(query):
     cursor = db.get_db().cursor()
     cursor.execute(query)
 
@@ -12,9 +12,12 @@ def cursor_to_json(query):
     for row in theData:
         json_data.append(dict(zip(column_headers, row)))
 
-    the_response = make_response(jsonify(json_data))
+    data = {"data": json_data}
+
+    the_response = make_response(json_data)
     the_response.status_code = 200
     the_response.mimetype = 'application/json'
+
     return the_response
 
 def submit_query(query, message):
