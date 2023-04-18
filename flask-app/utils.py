@@ -27,7 +27,7 @@ def submit_query(query, message):
         myResponse.status_code = 200
         return myResponse
     except:
-        myResponse = make_response("Error")
+        myResponse = make_response("Loser")
         myResponse.status_code = 400
         return myResponse
     
@@ -42,6 +42,6 @@ def bulk_submit_query(querys, message):
         myResponse.status_code = 200
         return myResponse
     except:
-        myResponse = make_response("Error")
+        myResponse = make_response("Loser")
         myResponse.status_code = 400
         return myResponse
