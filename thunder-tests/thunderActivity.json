@@ -2002,5 +2002,101 @@
         "value": "Updated"
       }
     ]
+  },
+  {
+    "_id": "a1e151cb-17c8-4aa8-82d3-e43750f29f61",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8001/pl/players",
+    "url": "localhost:8001/pl/players",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-04-18T23:27:36.011Z",
+    "modified": "2023-04-18T23:27:36.011Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"answers\": [\n    \"m\",\n    \"o\",\n    \"p\",\n    \"\",\n    \"\",\n    \"c\",\n    \"h\",\n    \"e\",\n    \"f\",\n    \"s\",\n    \"a\",\n    \"i\",\n    \"l\",\n    \"e\",\n    \"t\",\n    \"o\",\n    \"t\",\n    \"a\",\n    \"l\",\n    \"\",\n    \"\",\n    \"o\",\n    \"w\",\n    \"l\"\n  ]\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "625855b3-52c8-4a09-a248-f30c7ae74a79",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8001/pl/players",
+    "url": "localhost:8001/pl/players",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-18T23:27:40.627Z",
+    "modified": "2023-04-18T23:27:40.627Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"answers\": [\n    \"m\",\n    \"o\",\n    \"p\",\n    \"\",\n    \"\",\n    \"c\",\n    \"h\",\n    \"e\",\n    \"f\",\n    \"s\",\n    \"a\",\n    \"i\",\n    \"l\",\n    \"e\",\n    \"t\",\n    \"o\",\n    \"t\",\n    \"a\",\n    \"l\",\n    \"\",\n    \"\",\n    \"o\",\n    \"w\",\n    \"l\"\n  ]\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "cb35db8f-6943-432f-898a-af6ca3ab45c8",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8001/pl/players/1",
+    "url": "localhost:8001/pl/players/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-18T23:27:54.695Z",
+    "modified": "2023-04-18T23:27:54.695Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"answers\": [\n    \"m\",\n    \"o\",\n    \"p\",\n    \"\",\n    \"\",\n    \"c\",\n    \"h\",\n    \"e\",\n    \"f\",\n    \"s\",\n    \"a\",\n    \"i\",\n    \"l\",\n    \"e\",\n    \"t\",\n    \"o\",\n    \"t\",\n    \"a\",\n    \"l\",\n    \"\",\n    \"\",\n    \"o\",\n    \"w\",\n    \"l\"\n  ]\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
   }
 ]
