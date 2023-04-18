@@ -1,6 +1,6 @@
-from flask import Blueprint, request, request
-from utils import get_query, submit_query
-
+from flask import Blueprint, request, request, current_app
+from utils import get_query, submit_query, bulk_submit_query
+import math
 
 answers = Blueprint('answers', __name__)
 
@@ -53,3 +53,15 @@ def specific_answer(gameId, ValueRow, ValueColumn):
     elif request.method == 'DELETE':
         query = f'DELETE * FROM Answers WHERE gameId = {gameId})'
         return submit_query(query, "Deleted")
+    
+@answers.route('/answers/bulk/<gameId>/<gameName>', methods=['POST'])
+def bulkAdd(gameId,gameName):
+    data = request.json
+    charVals = data["answers"]
+    query = []
+    for i, val in enumerate(charVals):
+        if val != "":
+            row = math.floor(i/5)
+            col = i % 5
+            query.append(f"INSERT INTO Answers (gameId, gameName, valueRow, valueColumn, charValue) VALUES ({gameId}, '{gameName}',{row},{col},'{val}');")
+    return bulk_submit_query(query, "Inserted")

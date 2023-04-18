@@ -32,3 +32,18 @@ def submit_query(query, message):
         myResponse = make_response("Error")
         myResponse.status_code = 400
         return myResponse
+    
+
+def bulk_submit_query(querys, message):
+    try:
+        cursor = db.get_db().cursor()
+        for query in querys:
+            cursor.execute(query)
+        db.get_db().commit()
+        myResponse = make_response(message)
+        myResponse.status_code = 200
+        return myResponse
+    except:
+        myResponse = make_response("Error")
+        myResponse.status_code = 400
+        return myResponse
