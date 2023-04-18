@@ -11,7 +11,7 @@ def create_app():
     
     app.config['SECRET_KEY'] = 'someCrazyS3cR3T!Key.!'
     app.config['MYSQL_DATABASE_USER'] = 'root'
-    app.config['MYSQL_DATABASE_PASSWORD'] = open('/secrets/db_password.txt').readline()
+    app.config['MYSQL_DATABASE_PASSWORD'] = open('/secrets/db_root_password.txt').readline()
     app.config['MYSQL_DATABASE_HOST'] = 'db'
     app.config['MYSQL_DATABASE_PORT'] = 3306
     app.config['MYSQL_DATABASE_DB'] = 'KLMVGames'
