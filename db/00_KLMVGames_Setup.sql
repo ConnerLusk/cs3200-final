@@ -175,7 +175,3 @@ CREATE TABLE Clues
 # FROM Submission JOIN GameAttempt GA on Submission.attemptId = GA.attemptId
 # where playerId = {playerId} and gameId = {gameId};
 
-
-SELECT AttemptId, submissionNumber, numIncorrect
-    FROM Submission JOIN GameAttempt GA on Submission.attemptId = GA.attemptId
-    WHERE playerId = {playerId};
