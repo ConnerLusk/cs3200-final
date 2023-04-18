@@ -1,4 +1,4 @@
-from flask import Blueprint, request, request, current_app
+from flask import Blueprint, request
 from utils import get_query, submit_query, bulk_submit_query
 import math
 
@@ -9,29 +9,13 @@ answers = Blueprint('answers', __name__)
 def get_all_answers(gameId):
     if request.method == 'GET':
         return get_query(f'SELECT * FROM Answers WHERE gameId = {gameId}')
-    elif request.method == 'DELETE':
-        return submit_query(f'DELETE * FROM Answers WHERE gameId = {gameId}', "Deleted")
     
 
 
-@answers.route('/answers/<gameId>/<ValueRow>/<ValueColumn>', methods=['GET','POST','PUT','DELETE'])
+@answers.route('/answers/<gameId>/<ValueRow>/<ValueColumn>', methods=['GET','PUT','DELETE'])
 def specific_answer(gameId, ValueRow, ValueColumn):
     if request.method == 'GET':
-        return get_query(f'SELECT * FROM Answers WHERE gameId = {gameId} and ValueRow = {ValueRow} and {ValueColumn}')
-    
-    elif request.method == 'POST':
-        the_data = request.json
-
-        gameId = the_data["gameId"]
-        gameName = the_data["gameName"]
-        ValueRow = the_data["valueRow"]
-        ValueColumn = the_data["valueColumn"]
-        charValue = the_data["charValue"]
-
-        query = "INSERT INTO Answers (gameId, gameName, ValueRow, ValueColumn, charValue) VALUES ("
-        query += f"{gameId}, '{gameName}', {ValueRow}, {ValueColumn}, '{charValue}')"
-        
-        return submit_query(query, "Inserted")
+        return get_query(f'SELECT * FROM Answers WHERE gameId = {gameId} and valueRow = {ValueRow} and valueColumn = {ValueColumn}')
     
     elif request.method == 'PUT':
         the_data = request.json
@@ -51,7 +35,7 @@ def specific_answer(gameId, ValueRow, ValueColumn):
         return submit_query(query, "Updated")
     
     elif request.method == 'DELETE':
-        query = f'DELETE * FROM Answers WHERE gameId = {gameId})'
+        query = f'DELETE FROM Answers WHERE gameId = {gameId} and valueRow = {ValueRow} and valueColumn = {ValueColumn};'
         return submit_query(query, "Deleted")
     
 @answers.route('/answers/bulk/<gameId>/<gameName>', methods=['POST'])
