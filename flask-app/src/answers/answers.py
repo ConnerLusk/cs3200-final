@@ -47,5 +47,5 @@ def bulkAdd(gameId,gameName):
         if val != "":
             row = math.floor(i/5)
             col = i % 5
-            query.append(f"INSERT INTO Answers (gameId, gameName, valueRow, valueColumn, charValue) VALUES ({gameId}, '{gameName}',{row},{col},'{val}');")
+            query.append(f"REPLACE INTO Answers (gameId, gameName, valueRow, valueColumn, charValue) VALUES ({gameId}, '{gameName}',{row},{col},'{val}');")
     return bulk_submit_query(query, "Inserted")
