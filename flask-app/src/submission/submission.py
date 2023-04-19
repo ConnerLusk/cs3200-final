@@ -39,14 +39,31 @@ def get_player_game_submission_num(playerId, gameId, submissionNumber):
     '''
     return get_query(query)
 
+def calc_num_incorrect(attemptId, submissionNumber):
+    count = 0
+    rows = [1,2,3,4,5]
+    cols = [1,2,3,4,5]
+    for x in rows:
+        for y in cols:
+            try:
+                guessVal = get_query(f'Select Guesses.charValue FROM Guesses WHERE submissionNumber = {submissionNumber} AND attemptId = {attemptId} AND valueColumn = {y} and valueRow = {x};')
+                ansVal = get_query(f'Select Answers.charValue FROM Answers WHERE submissionNumber = {submissionNumber} AND attemptId = {attemptId} AND valueColumn = {y} and valueRow = {x};')
+                if guessVal == ansVal: 
+                    count += 1
+            except:
+                print("bang")
+    return 25 - count
+
 
 @submission.route('/submission/<submissionNumber>/<attemptId>', methods=['PUT'])
 def put_player_game_submission_num(submissionNumber, attemptId):
     the_data = request.json
     attemptId = the_data["attemptId"]
-    numIncorrect = 3
+    numIncorrect = calc_num_incorrect(attemptId, submissionNumber)
 
     query = f"UPDATE Submission SET numIncorrect = '{numIncorrect}' WHERE attemptId = {attemptId} and\
             submissionNumber = {submissionNumber};"
 
     return submit_query(query, "Updated")
+
+
