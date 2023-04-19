@@ -1,20 +1,49 @@
-# MySQL + Flask Boilerplate Project
+# CS3200 final project
+## Project Overview
+For this project our group chose to create a one stop shop for word games. The four pages we created were: 
 
-This repo contains a boilerplate setup for spinning up 3 Docker containers: 
-1. A MySQL 8 container for obvious reasons
-1. A Python Flask container to implement a REST API
-1. A Local AppSmith Server
+1. Player Submissions Page
+   
+    a. PUT update the submissions
+    
+    b. POST create a new gameAttempt
 
-## How to setup and start the containers
-**Important** - you need Docker Desktop installed
+    c. DELETE a submission
 
-1. Clone this repository.  
-1. Create a file named `db_root_password.txt` in the `secrets/` folder and put inside of it the root password for MySQL. 
-1. Create a file named `db_password.txt` in the `secrets/` folder and put inside of it the password you want to use for the a non-root user named webapp. 
-1. In a terminal or command prompt, navigate to the folder with the `docker-compose.yml` file.  
-1. Build the images with `docker compose build`
-1. Start the containers with `docker compose up`.  To run in detached mode, run `docker compose up -d`. 
+    d. GET the clues + other gets
 
+2. Player Profile Page
+
+    a. PUT update the user
+
+    b. POST create a new user
+
+    c. DELETE the players account
+
+    d. GET the players initial information + others
+
+3. Engineer Work Page
+
+    a. PUT update the answers
+
+    b. POST Insert new clues for the puzzle
+
+    c. DELETE Clues from the puzzle
+
+    d. GET the current clues
+
+4. Admin page
+
+    a. PUT update the players information
+
+    b. POST create a new game
+
+    c. DELETE all the games of a certain type
+
+    d. GET all of the players
+
+## Video Link
+<a>www.blah.com</a>
 
 
 
