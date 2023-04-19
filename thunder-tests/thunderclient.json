@@ -1546,5 +1546,155 @@
         "value": "Updated"
       }
     ]
+  },
+  {
+    "_id": "370e194e-5438-4780-949e-8b622420c903",
+    "colId": "8722137f-d151-46da-b8ac-49d91b367899",
+    "containerId": "",
+    "name": "GET",
+    "url": "localhost:8001/pl/players",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-19T12:38:17.034Z",
+    "modified": "2023-04-19T12:38:17.034Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"fname\":\"Gu\",\"lname\":\"Hatzar\"},{\"fname\":\"Kelley\",\"lname\":\"Helkin\"},{\"fname\":\"Lazarus\",\"lname\":\"Gauden\"},{\"fname\":\"Patience\",\"lname\":\"Godmer\"},{\"fname\":\"Penni\",\"lname\":\"Cohn\"},{\"fname\":\"Royall\",\"lname\":\"Lordon\"},{\"fname\":\"Marget\",\"lname\":\"Boddis\"},{\"fname\":\"Eirena\",\"lname\":\"Scholtz\"},{\"fname\":\"Marabel\",\"lname\":\"Saffin\"},{\"fname\":\"Cory\",\"lname\":\"Jedrzejewski\"}]"
+      }
+    ]
+  },
+  {
+    "_id": "30a03e48-cba4-463f-8d53-a679486fa565",
+    "colId": "8722137f-d151-46da-b8ac-49d91b367899",
+    "containerId": "",
+    "name": "POST",
+    "url": "localhost:8001/pl/players",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-04-19T12:38:29.215Z",
+    "modified": "2023-04-19T12:38:29.215Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"birthday\": \"1990-11-11\",\n  \"email\": \"ghatzar0@usa.gov\",\n  \"fName\": \"Gt\",\n  \"isPremium\": 0,\n  \"lName\": \"Hatzar\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Inserted"
+      }
+    ]
+  },
+  {
+    "_id": "fc154d76-7aff-4367-8129-63780aea6f4a",
+    "colId": "8722137f-d151-46da-b8ac-49d91b367899",
+    "containerId": "",
+    "name": "playerId GET",
+    "url": "localhost:8001/pl/players/1",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-04-19T12:38:47.732Z",
+    "modified": "2023-04-19T12:38:47.732Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"birthday\":\"Sun, 11 Nov 1900 00:00:00 GMT\",\"email\":\"ghatzar0@usa.gov\",\"fName\":\"Gu\",\"isPremium\":0,\"lName\":\"Hatzar\",\"playerID\":1}]"
+      }
+    ]
+  },
+  {
+    "_id": "393854e5-eaf1-4dee-bc99-fd7086d71035",
+    "colId": "8722137f-d151-46da-b8ac-49d91b367899",
+    "containerId": "",
+    "name": "playerId PUT",
+    "url": "localhost:8001/pl/players/1",
+    "method": "PUT",
+    "sortNum": 40000,
+    "created": "2023-04-19T12:39:01.565Z",
+    "modified": "2023-04-19T12:39:01.565Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"birthday\": \"1990-11-11\",\n  \"email\": \"ghatzar0@usa.gov\",\n  \"fName\": \"Gt\",\n  \"isPremium\": 0,\n  \"lName\": \"Hatzar\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "e6571b77-544b-4090-b0b9-336fdb17b873",
+    "colId": "8722137f-d151-46da-b8ac-49d91b367899",
+    "containerId": "",
+    "name": "playerId DELETE",
+    "url": "localhost:8001/pl/players/1",
+    "method": "DELETE",
+    "sortNum": 50000,
+    "created": "2023-04-19T12:39:14.148Z",
+    "modified": "2023-04-19T12:39:14.148Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"birthday\": \"1990-11-11\",\n  \"email\": \"ghatzar0@usa.gov\",\n  \"fName\": \"Gt\",\n  \"isPremium\": 0,\n  \"lName\": \"Hatzar\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
   }
 ]

@@ -2031,10 +2031,23 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-04-18T23:27:40.627Z",
-    "modified": "2023-04-19T00:49:16.904Z",
+    "modified": "2023-04-19T12:34:49.301Z",
     "headers": [],
     "params": [],
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"fname\":\"Gu\",\"lname\":\"Hatzar\"},{\"fname\":\"Kelley\",\"lname\":\"Helkin\"},{\"fname\":\"Lazarus\",\"lname\":\"Gauden\"},{\"fname\":\"Patience\",\"lname\":\"Godmer\"},{\"fname\":\"Penni\",\"lname\":\"Cohn\"},{\"fname\":\"Royall\",\"lname\":\"Lordon\"},{\"fname\":\"Marget\",\"lname\":\"Boddis\"},{\"fname\":\"Eirena\",\"lname\":\"Scholtz\"},{\"fname\":\"Marabel\",\"lname\":\"Saffin\"},{\"fname\":\"Cory\",\"lname\":\"Jedrzejewski\"}]"
+      }
+    ]
   },
   {
     "_id": "cb35db8f-6943-432f-898a-af6ca3ab45c8",
@@ -2045,14 +2058,9 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-04-18T23:27:54.695Z",
-    "modified": "2023-04-18T23:27:54.695Z",
+    "modified": "2023-04-19T12:37:13.477Z",
     "headers": [],
     "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{\n  \"answers\": [\n    \"m\",\n    \"o\",\n    \"p\",\n    \"\",\n    \"\",\n    \"c\",\n    \"h\",\n    \"e\",\n    \"f\",\n    \"s\",\n    \"a\",\n    \"i\",\n    \"l\",\n    \"e\",\n    \"t\",\n    \"o\",\n    \"t\",\n    \"a\",\n    \"l\",\n    \"\",\n    \"\",\n    \"o\",\n    \"w\",\n    \"l\"\n  ]\n}",
-      "form": []
-    },
     "tests": [
       {
         "type": "res-code",
@@ -2061,10 +2069,10 @@
         "value": "200"
       },
       {
-        "type": "res-body",
-        "custom": "",
+        "type": "json-query",
+        "custom": "json",
         "action": "equal",
-        "value": "Updated"
+        "value": "[{\"birthday\":\"Sun, 11 Nov 1900 00:00:00 GMT\",\"email\":\"ghatzar0@usa.gov\",\"fName\":\"Gu\",\"isPremium\":0,\"lName\":\"Hatzar\",\"playerID\":1}]"
       }
     ]
   },
@@ -2109,15 +2117,28 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2023-04-19T00:49:37.097Z",
-    "modified": "2023-04-19T00:53:23.997Z",
+    "modified": "2023-04-19T12:36:26.148Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"birthday\": \"1990-10-10\",\n  \"email\": \"ghatzar0@usa.gov\",\n  \"fName\": \"Gunther\",\n  \"isPremium\": 0,\n  \"lName\": \"Hatzar\"\n}",
+      "raw": "{\n  \"birthday\": \"1990-11-11\",\n  \"email\": \"ghatzar0@usa.gov\",\n  \"fName\": \"Gt\",\n  \"isPremium\": 0,\n  \"lName\": \"Hatzar\"\n}",
       "form": []
     },
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Inserted"
+      }
+    ]
   },
   {
     "_id": "683339d8-f16f-4b23-a6c6-a1100637deb2",
@@ -2132,5 +2153,69 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "6991c38e-245a-42db-bdca-f44a6f7a9ffe",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8001/pl/players/1",
+    "url": "localhost:8001/pl/players/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-04-19T02:29:56.438Z",
+    "modified": "2023-04-19T12:37:50.005Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"birthday\": \"1990-11-11\",\n  \"email\": \"ghatzar0@usa.gov\",\n  \"fName\": \"Gt\",\n  \"isPremium\": 0,\n  \"lName\": \"Hatzar\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "c6fd4b1d-6aa7-4af8-bcdf-b94c7ba71aa0",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8001/pl/players/1",
+    "url": "localhost:8001/pl/players/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-04-19T12:37:55.789Z",
+    "modified": "2023-04-19T12:37:59.378Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"birthday\": \"1990-11-11\",\n  \"email\": \"ghatzar0@usa.gov\",\n  \"fName\": \"Gt\",\n  \"isPremium\": 0,\n  \"lName\": \"Hatzar\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
   }
 ]
