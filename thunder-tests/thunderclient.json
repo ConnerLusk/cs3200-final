@@ -1,1 +1,1550 @@
-[]
+[
+  {
+    "_id": "6cae3759-6ea3-4bf4-bfae-6c08aa570633",
+    "colId": "dec33043-4fc7-4ce9-a643-b7e5f08cf7ba",
+    "containerId": "",
+    "name": "playerId GET 1",
+    "url": "localhost:8001/s/submission/1",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-18T22:34:09.249Z",
+    "modified": "2023-04-18T22:34:09.249Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":1,\"numIncorrect\":0,\"submissionNumber\":1}]"
+      }
+    ]
+  },
+  {
+    "_id": "92e705cc-8792-4ae9-8f02-96559d3530c4",
+    "colId": "dec33043-4fc7-4ce9-a643-b7e5f08cf7ba",
+    "containerId": "",
+    "name": "playerId GET 1",
+    "url": "localhost:8001/s/submission/2",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-18T22:34:17.714Z",
+    "modified": "2023-04-18T22:34:17.714Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":2,\"numIncorrect\":0,\"submissionNumber\":1},{\"attemptId\":3,\"numIncorrect\":0,\"submissionNumber\":1}]"
+      }
+    ]
+  },
+  {
+    "_id": "426c2199-2510-4202-a426-bd99cdb91768",
+    "colId": "dec33043-4fc7-4ce9-a643-b7e5f08cf7ba",
+    "containerId": "",
+    "name": "playerId, gameId GET 1",
+    "url": "localhost:8001/s/submission/1/1",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-04-18T22:35:15.732Z",
+    "modified": "2023-04-18T22:35:15.732Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[]"
+      }
+    ]
+  },
+  {
+    "_id": "1c5646e0-f022-4e39-bb24-d8bc89cae4e8",
+    "colId": "dec33043-4fc7-4ce9-a643-b7e5f08cf7ba",
+    "containerId": "",
+    "name": "playerId, gameId GET 2",
+    "url": "localhost:8001/s/submission/1/3",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-04-18T22:35:24.879Z",
+    "modified": "2023-04-18T22:35:24.879Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":1,\"numIncorrect\":0,\"submissionNumber\":1}]"
+      }
+    ]
+  },
+  {
+    "_id": "6393844b-a634-4108-b5be-bb80ad6f7d76",
+    "colId": "dec33043-4fc7-4ce9-a643-b7e5f08cf7ba",
+    "containerId": "",
+    "name": "submissionNumber, attemptId PUT 1",
+    "url": "localhost:8001/s/submission/1/3",
+    "method": "PUT",
+    "sortNum": 50000,
+    "created": "2023-04-18T22:39:58.846Z",
+    "modified": "2023-04-18T22:39:58.846Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"attemptId\": 1,\n  \"numIncorrect\": 0,\n  \"submissionNumber\": 3\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "26f7bec2-7aa8-4801-9659-7bcde2a54ac7",
+    "colId": "dec33043-4fc7-4ce9-a643-b7e5f08cf7ba",
+    "containerId": "",
+    "name": "submissionNumber, attemptId PUT 2",
+    "url": "localhost:8001/s/submission/1/3",
+    "method": "PUT",
+    "sortNum": 60000,
+    "created": "2023-04-18T22:40:11.194Z",
+    "modified": "2023-04-18T22:40:11.194Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"attemptId\": 1,\n  \"numIncorrect\": 0,\n  \"submissionNumber\": 3\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "0985832e-5436-4ecb-951f-b3544a0ef79e",
+    "colId": "dec33043-4fc7-4ce9-a643-b7e5f08cf7ba",
+    "containerId": "",
+    "name": "playerId, gameId, submissionNumber GET 1",
+    "url": "localhost:8001/s/submission/2/3/1",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2023-04-18T22:43:05.159Z",
+    "modified": "2023-04-18T22:43:05.159Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":1,\"numIncorrect\":3,\"submissionNumber\":1}]"
+      }
+    ]
+  },
+  {
+    "_id": "24d07458-a6f7-4f73-9fd0-89f03cae1b5b",
+    "colId": "dec33043-4fc7-4ce9-a643-b7e5f08cf7ba",
+    "containerId": "",
+    "name": "playerId, gameId, submissionNumber GET 2",
+    "url": "localhost:8001/s/submission/2/4/1",
+    "method": "GET",
+    "sortNum": 80000,
+    "created": "2023-04-18T22:43:13.760Z",
+    "modified": "2023-04-18T22:43:13.760Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":2,\"numIncorrect\":0,\"submissionNumber\":1}]"
+      }
+    ]
+  },
+  {
+    "_id": "34e9cd83-8348-4e83-9d43-38b068f76f61",
+    "colId": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "containerId": "",
+    "name": "attemptId GET 1",
+    "url": "localhost:8001/gu/guesses/1",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-18T22:45:05.011Z",
+    "modified": "2023-04-18T22:45:05.011Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":1,\"charValue\":\"b\",\"submissionNumber\":1,\"valueColumn\":2,\"valueRow\":0},{\"attemptId\":1,\"charValue\":\"o\",\"submissionNumber\":1,\"valueColumn\":3,\"valueRow\":0},{\"attemptId\":1,\"charValue\":\"o\",\"submissionNumber\":1,\"valueColumn\":4,\"valueRow\":0},{\"attemptId\":1,\"charValue\":\"r\",\"submissionNumber\":1,\"valueColumn\":1,\"valueRow\":1},{\"attemptId\":1,\"charValue\":\"i\",\"submissionNumber\":1,\"valueColumn\":2,\"valueRow\":1},{\"attemptId\":1,\"charValue\":\"c\",\"submissionNumber\":1,\"valueColumn\":3,\"valueRow\":1},{\"attemptId\":1,\"charValue\":\"h\",\"submissionNumber\":1,\"valueColumn\":4,\"valueRow\":1},{\"attemptId\":1,\"charValue\":\"c\",\"submissionNumber\":1,\"valueColumn\":0,\"valueRow\":2},{\"attemptId\":1,\"charValue\":\"o\",\"submissionNumber\":1,\"valueColumn\":1,\"valueRow\":2},{\"attemptId\":1,\"charValue\":\"n\",\"submissionNumber\":1,\"valueColumn\":2,\"valueRow\":2},{\"attemptId\":1,\"charValue\":\"c\",\"submissionNumber\":1,\"valueColumn\":3,\"valueRow\":2},{\"attemptId\":1,\"charValue\":\"h\",\"submissionNumber\":1,\"valueColumn\":4,\"valueRow\":2},{\"attemptId\":1,\"charValue\":\"v\",\"submissionNumber\":1,\"valueColumn\":0,\"valueRow\":3},{\"attemptId\":1,\"charValue\":\"o\",\"submissionNumber\":1,\"valueColumn\":1,\"valueRow\":3},{\"attemptId\":1,\"charValue\":\"g\",\"submissionNumber\":1,\"valueColumn\":2,\"valueRow\":3},{\"attemptId\":1,\"charValue\":\"u\",\"submissionNumber\":1,\"valueColumn\":3,\"valueRow\":3},{\"attemptId\":1,\"charValue\":\"e\",\"submissionNumber\":1,\"valueColumn\":4,\"valueRow\":3},{\"attemptId\":1,\"charValue\":\"s\",\"submissionNumber\":1,\"valueColumn\":0,\"valueRow\":4},{\"attemptId\":1,\"charValue\":\"t\",\"submissionNumber\":1,\"valueColumn\":1,\"valueRow\":4},{\"attemptId\":1,\"charValue\":\"o\",\"submissionNumber\":1,\"valueColumn\":2,\"valueRow\":4},{\"attemptId\":1,\"charValue\":\"r\",\"submissionNumber\":1,\"valueColumn\":3,\"valueRow\":4},{\"attemptId\":1,\"charValue\":\"y\",\"submissionNumber\":1,\"valueColumn\":4,\"valueRow\":4}]"
+      }
+    ]
+  },
+  {
+    "_id": "7078bc62-ec46-4c63-a7a6-bcdd7725d68d",
+    "colId": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "containerId": "",
+    "name": "attemptId GET 2",
+    "url": "localhost:8001/gu/guesses/2",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-18T22:45:12.392Z",
+    "modified": "2023-04-18T22:45:12.392Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":2,\"charValue\":\"d\",\"submissionNumber\":1,\"valueColumn\":1,\"valueRow\":0},{\"attemptId\":2,\"charValue\":\"a\",\"submissionNumber\":1,\"valueColumn\":2,\"valueRow\":0},{\"attemptId\":2,\"charValue\":\"r\",\"submissionNumber\":1,\"valueColumn\":3,\"valueRow\":0},{\"attemptId\":2,\"charValue\":\"k\",\"submissionNumber\":1,\"valueColumn\":4,\"valueRow\":0},{\"attemptId\":2,\"charValue\":\"m\",\"submissionNumber\":1,\"valueColumn\":0,\"valueRow\":1},{\"attemptId\":2,\"charValue\":\"e\",\"submissionNumber\":1,\"valueColumn\":1,\"valueRow\":1},{\"attemptId\":2,\"charValue\":\"l\",\"submissionNumber\":1,\"valueColumn\":2,\"valueRow\":1},{\"attemptId\":2,\"charValue\":\"e\",\"submissionNumber\":1,\"valueColumn\":3,\"valueRow\":1},{\"attemptId\":2,\"charValue\":\"e\",\"submissionNumber\":1,\"valueColumn\":4,\"valueRow\":1},{\"attemptId\":2,\"charValue\":\"i\",\"submissionNumber\":1,\"valueColumn\":0,\"valueRow\":2},{\"attemptId\":2,\"charValue\":\"c\",\"submissionNumber\":1,\"valueColumn\":1,\"valueRow\":2},{\"attemptId\":2,\"charValue\":\"i\",\"submissionNumber\":1,\"valueColumn\":2,\"valueRow\":2},{\"attemptId\":2,\"charValue\":\"n\",\"submissionNumber\":1,\"valueColumn\":3,\"valueRow\":2},{\"attemptId\":2,\"charValue\":\"g\",\"submissionNumber\":1,\"valueColumn\":4,\"valueRow\":2},{\"attemptId\":2,\"charValue\":\"c\",\"submissionNumber\":1,\"valueColumn\":0,\"valueRow\":3},{\"attemptId\":2,\"charValue\":\"a\",\"submissionNumber\":1,\"valueColumn\":1,\"valueRow\":3},{\"attemptId\":2,\"charValue\":\"k\",\"submissionNumber\":1,\"valueColumn\":2,\"valueRow\":3},{\"attemptId\":2,\"charValue\":\"e\",\"submissionNumber\":1,\"valueColumn\":3,\"valueRow\":3},{\"attemptId\":2,\"charValue\":\"s\",\"submissionNumber\":1,\"valueColumn\":0,\"valueRow\":4},{\"attemptId\":2,\"charValue\":\"l\",\"submissionNumber\":1,\"valueColumn\":1,\"valueRow\":4},{\"attemptId\":2,\"charValue\":\"e\",\"submissionNumber\":1,\"valueColumn\":2,\"valueRow\":4},{\"attemptId\":2,\"charValue\":\"w\",\"submissionNumber\":1,\"valueColumn\":3,\"valueRow\":4}]"
+      }
+    ]
+  },
+  {
+    "_id": "7f3e0c90-7a2d-4b40-8f73-e1c020e3d8d2",
+    "colId": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "containerId": "",
+    "name": "attemptId, submissionNumber, row, col GET 1",
+    "url": "localhost:8001/gu/guesses/2/1/1/0",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-04-18T22:46:26.376Z",
+    "modified": "2023-04-18T22:46:26.376Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":2,\"charValue\":\"m\",\"submissionNumber\":1,\"valueColumn\":0,\"valueRow\":1}]"
+      }
+    ]
+  },
+  {
+    "_id": "de10b8be-db5a-4447-848a-15a6c83494e7",
+    "colId": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "containerId": "",
+    "name": "attemptId, submissionNumber, row, col GET 2",
+    "url": "localhost:8001/gu/guesses/2/1/1/1",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-04-18T22:46:34.758Z",
+    "modified": "2023-04-18T22:46:34.758Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":2,\"charValue\":\"e\",\"submissionNumber\":1,\"valueColumn\":1,\"valueRow\":1}]"
+      }
+    ]
+  },
+  {
+    "_id": "21ec72b4-db59-498d-83b9-7efcdd43284b",
+    "colId": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "containerId": "",
+    "name": "attemptId, submissionNumber, row, col POST 1",
+    "url": "localhost:8001/gu/guesses/2/1/12/12",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2023-04-18T22:49:20.524Z",
+    "modified": "2023-04-18T22:49:20.524Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "  {\n    \"attemptId\": 2,\n    \"charValue\": \"t\",\n    \"submissionNumber\": 1,\n    \"valueColumn\": 12,\n    \"valueRow\": 12\n  }",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Inserted"
+      }
+    ]
+  },
+  {
+    "_id": "4adae541-4fdc-4208-b15d-c886ac46ebb2",
+    "colId": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "containerId": "",
+    "name": "attemptId, submissionNumber, row, col POST 2",
+    "url": "localhost:8001/gu/guesses/2/1/10/10",
+    "method": "POST",
+    "sortNum": 60000,
+    "created": "2023-04-18T22:50:59.990Z",
+    "modified": "2023-04-18T22:50:59.990Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"attemptId\": 2,\n  \"charValue\": \"l\",\n  \"submissionNumber\": 1,\n  \"valueColumn\": 10,\n  \"valueRow\": 10\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Inserted"
+      }
+    ]
+  },
+  {
+    "_id": "2440e32e-0541-47e2-8965-f15c8b1b10a2",
+    "colId": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "containerId": "",
+    "name": "attemptId, submissionNumber, row, col PUT 1",
+    "url": "localhost:8001/gu/guesses/2/1/10/10",
+    "method": "PUT",
+    "sortNum": 70000,
+    "created": "2023-04-18T22:51:40.024Z",
+    "modified": "2023-04-18T22:51:40.024Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"attemptId\": 2,\n  \"charValue\": \"w\",\n  \"submissionNumber\": 1,\n  \"valueColumn\": 10,\n  \"valueRow\": 10\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "21aa3a7c-2514-4e32-8858-454ac59cfbbd",
+    "colId": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "containerId": "",
+    "name": "attemptId, submissionNumber, row, col PUT 2",
+    "url": "localhost:8001/gu/guesses/2/1/12/12",
+    "method": "PUT",
+    "sortNum": 80000,
+    "created": "2023-04-18T22:52:12.690Z",
+    "modified": "2023-04-18T22:52:12.690Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"attemptId\": 2,\n  \"charValue\": \"p\",\n  \"submissionNumber\": 1,\n  \"valueColumn\": 12,\n  \"valueRow\": 12\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "7cd4dd5c-5fcb-4ade-99ca-dbb7f1450425",
+    "colId": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "containerId": "",
+    "name": "attemptId, submissionNumber, row, col DELETE 1",
+    "url": "localhost:8001/gu/guesses/2/1/12/12",
+    "method": "DELETE",
+    "sortNum": 90000,
+    "created": "2023-04-18T22:52:54.806Z",
+    "modified": "2023-04-18T22:52:54.806Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
+  },
+  {
+    "_id": "790c5483-1c7b-4fc2-b1ce-876cd34d416d",
+    "colId": "d7ce9feb-6bcf-4cc6-b32c-c8c94db37047",
+    "containerId": "",
+    "name": "attemptId, submissionNumber, row, col DELETE 2",
+    "url": "localhost:8001/gu/guesses/2/1/10/10",
+    "method": "DELETE",
+    "sortNum": 100000,
+    "created": "2023-04-18T22:53:02.306Z",
+    "modified": "2023-04-18T22:53:02.306Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
+  },
+  {
+    "_id": "281ae119-9277-4b17-9c8f-4af885d58e43",
+    "colId": "6a5cdb01-a37b-4902-b9dc-db8d47272ef5",
+    "containerId": "",
+    "name": "all GET",
+    "url": "localhost:8001/gt/",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-18T22:54:12.460Z",
+    "modified": "2023-04-18T22:54:12.460Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"descrip\":\"In Crossword, players fill in a grid with words based on clues given.\",\"gameName\":\"Crossword\",\"rules\":\"Letter placement puzzle game with clues\"},{\"descrip\":\"In Sudoku, players fill in a grid with numbers so that each row, column, and sub-grid contains all of the digits from 1 to 9 without any repetition.\",\"gameName\":\"Sudoku\",\"rules\":\"Number placement puzzle game\"}]"
+      }
+    ]
+  },
+  {
+    "_id": "c5e76332-79c6-453e-850f-ef8dd08e542e",
+    "colId": "c41d8994-2251-44e0-9680-93c9be65e6ae",
+    "containerId": "",
+    "name": "gameName GET 1",
+    "url": "localhost:8001/g/game/Crossword",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-18T22:55:35.490Z",
+    "modified": "2023-04-18T22:55:35.490Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"difficulty\":3,\"gameId\":1,\"gameName\":\"Crossword\",\"projectCodeName\":\"Redhold\"},{\"difficulty\":2,\"gameId\":2,\"gameName\":\"Crossword\",\"projectCodeName\":\"Otcom\"},{\"difficulty\":1,\"gameId\":3,\"gameName\":\"Crossword\",\"projectCodeName\":\"Lotlux\"},{\"difficulty\":2,\"gameId\":4,\"gameName\":\"Crossword\",\"projectCodeName\":\"Voltsillam\"}]"
+      }
+    ]
+  },
+  {
+    "_id": "cbf3896a-d30f-401b-a6ca-7f5ede14e484",
+    "colId": "c41d8994-2251-44e0-9680-93c9be65e6ae",
+    "containerId": "",
+    "name": "gameName GET 2",
+    "url": "localhost:8001/g/game/Tetris",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-18T22:55:43.188Z",
+    "modified": "2023-04-18T22:55:43.188Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[]"
+      }
+    ]
+  },
+  {
+    "_id": "46e50e0a-be33-42cd-a788-27857bb2070d",
+    "colId": "c41d8994-2251-44e0-9680-93c9be65e6ae",
+    "containerId": "",
+    "name": "gameName, difficulty, projectName GET 1",
+    "url": "localhost:8001/g/game/Crossword/3/Redhold",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-04-18T22:58:39.354Z",
+    "modified": "2023-04-18T22:58:39.354Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"difficulty\":3,\"gameId\":1,\"gameName\":\"Crossword\",\"projectCodeName\":\"Redhold\"}]"
+      }
+    ]
+  },
+  {
+    "_id": "2dc5f805-c06c-4e14-9827-88012a38b54b",
+    "colId": "c41d8994-2251-44e0-9680-93c9be65e6ae",
+    "containerId": "",
+    "name": "gameName, difficulty, projectName GET 2",
+    "url": "localhost:8001/g/game/Crossword/2/Otcom",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-04-18T22:58:49.638Z",
+    "modified": "2023-04-18T22:58:49.638Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"difficulty\":2,\"gameId\":2,\"gameName\":\"Crossword\",\"projectCodeName\":\"Otcom\"}]"
+      }
+    ]
+  },
+  {
+    "_id": "0c4d3a2e-88d4-4b16-9991-064e19b618bd",
+    "colId": "c41d8994-2251-44e0-9680-93c9be65e6ae",
+    "containerId": "",
+    "name": "gameName, difficulty, projectName POST 1",
+    "url": "localhost:8001/g/game/Crossword/2/Alphazap",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2023-04-18T23:00:45.472Z",
+    "modified": "2023-04-18T23:00:45.472Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": " {\n    \"difficulty\": 2,\n    \"gameName\": \"Crossword\",\n    \"projectCodeName\": \"Alphazap\"\n  }",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Inserted"
+      }
+    ]
+  },
+  {
+    "_id": "630faa11-acd4-415c-b2e2-c3e03f40ef99",
+    "colId": "c41d8994-2251-44e0-9680-93c9be65e6ae",
+    "containerId": "",
+    "name": "gameName, difficulty, projectName POST 2",
+    "url": "localhost:8001/g/game/Crossword/3/Bitchip",
+    "method": "POST",
+    "sortNum": 60000,
+    "created": "2023-04-18T23:00:54.853Z",
+    "modified": "2023-04-18T23:00:54.853Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": " {\n    \"difficulty\": 3,\n    \"gameName\": \"Crossword\",\n    \"projectCodeName\": \"Bitchip\"\n  }",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Inserted"
+      }
+    ]
+  },
+  {
+    "_id": "12ff28c5-56da-4675-902a-52ad31a29c00",
+    "colId": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "containerId": "",
+    "name": "playerId GET 1",
+    "url": "localhost:8001/ga/gameAttempt/1",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-18T23:02:35.441Z",
+    "modified": "2023-04-18T23:02:35.441Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":1,\"dateStarted\":\"Tue, 18 Apr 2023 22:30:16 GMT\",\"gameId\":3,\"isInProgress\":1,\"playerID\":1,\"score\":25,\"timeElapsed\":15}]"
+      }
+    ]
+  },
+  {
+    "_id": "4d73fd7b-2c0a-4102-ab73-b76fe6f0e5ea",
+    "colId": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "containerId": "",
+    "name": "playerId GET 2",
+    "url": "localhost:8001/ga/gameAttempt/2",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-18T23:02:46.620Z",
+    "modified": "2023-04-18T23:02:46.620Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":2,\"dateStarted\":\"Tue, 18 Apr 2023 22:30:16 GMT\",\"gameId\":4,\"isInProgress\":1,\"playerID\":2,\"score\":43,\"timeElapsed\":72},{\"attemptId\":3,\"dateStarted\":\"Tue, 18 Apr 2023 22:30:16 GMT\",\"gameId\":2,\"isInProgress\":1,\"playerID\":2,\"score\":50,\"timeElapsed\":162}]"
+      }
+    ]
+  },
+  {
+    "_id": "24a2c4b4-f53e-4b28-917a-26a68c54b7be",
+    "colId": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "containerId": "",
+    "name": "playerId DELETE 1",
+    "url": "localhost:8001/ga/gameAttempt/2",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2023-04-18T23:03:24.254Z",
+    "modified": "2023-04-18T23:03:24.254Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
+  },
+  {
+    "_id": "bdc28be4-f7b2-4305-a453-114b129a1af8",
+    "colId": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "containerId": "",
+    "name": "playerId DELETE 2",
+    "url": "localhost:8001/ga/gameAttempt/1",
+    "method": "DELETE",
+    "sortNum": 40000,
+    "created": "2023-04-18T23:03:37.753Z",
+    "modified": "2023-04-18T23:03:37.753Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
+  },
+  {
+    "_id": "6f0bdd44-b494-47e3-90f1-69bcbbefef17",
+    "colId": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "containerId": "",
+    "name": "playerId, gameId GET 1",
+    "url": "localhost:8001/ga/gameAttempt/3/3",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-04-18T23:04:54.718Z",
+    "modified": "2023-04-18T23:04:54.718Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":4,\"dateStarted\":\"Tue, 18 Apr 2023 22:30:16 GMT\",\"gameId\":3,\"isInProgress\":1,\"playerID\":3,\"score\":68,\"timeElapsed\":19},{\"attemptId\":6,\"dateStarted\":\"Tue, 18 Apr 2023 22:30:16 GMT\",\"gameId\":3,\"isInProgress\":1,\"playerID\":3,\"score\":1,\"timeElapsed\":96}]"
+      }
+    ]
+  },
+  {
+    "_id": "cfced244-5fe8-4400-9b64-662dc2119e27",
+    "colId": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "containerId": "",
+    "name": "playerId, gameId GET 2",
+    "url": "localhost:8001/ga/gameAttempt/3/4",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2023-04-18T23:05:04.118Z",
+    "modified": "2023-04-18T23:05:04.118Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"attemptId\":7,\"dateStarted\":\"Tue, 18 Apr 2023 22:30:16 GMT\",\"gameId\":4,\"isInProgress\":1,\"playerID\":3,\"score\":57,\"timeElapsed\":81},{\"attemptId\":8,\"dateStarted\":\"Tue, 18 Apr 2023 22:30:16 GMT\",\"gameId\":4,\"isInProgress\":1,\"playerID\":3,\"score\":57,\"timeElapsed\":12}]"
+      }
+    ]
+  },
+  {
+    "_id": "e8743ce1-4d91-4c54-8280-5c2beefe4040",
+    "colId": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "containerId": "",
+    "name": "playerId, gameId POST 1",
+    "url": "localhost:8001/ga/gameAttempt/3/4",
+    "method": "POST",
+    "sortNum": 70000,
+    "created": "2023-04-18T23:06:45.651Z",
+    "modified": "2023-04-18T23:06:45.651Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"gameId\": 4,\n  \"isInProgress\": 1,\n  \"playerID\": 3,\n  \"score\": 57,\n  \"timeElapsed\": 12\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Inserted"
+      }
+    ]
+  },
+  {
+    "_id": "9376411a-d45d-441f-b5ed-ddc67927e66f",
+    "colId": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "containerId": "",
+    "name": "playerId, gameId POST 2",
+    "url": "localhost:8001/ga/gameAttempt/3/5",
+    "method": "POST",
+    "sortNum": 80000,
+    "created": "2023-04-18T23:06:55.951Z",
+    "modified": "2023-04-18T23:06:55.951Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"gameId\": 5,\n  \"isInProgress\": 1,\n  \"playerID\": 3,\n  \"score\": 57,\n  \"timeElapsed\": 12\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Inserted"
+      }
+    ]
+  },
+  {
+    "_id": "e16a65f9-c809-4be8-9e40-80ff3b28f84c",
+    "colId": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "containerId": "",
+    "name": "playerId, gameId DELETE 1",
+    "url": "localhost:8001/ga/gameAttempt/3/5",
+    "method": "DELETE",
+    "sortNum": 90000,
+    "created": "2023-04-18T23:07:33.201Z",
+    "modified": "2023-04-18T23:07:33.201Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
+  },
+  {
+    "_id": "a65d91a9-9e00-43c4-b0be-36ea0525b234",
+    "colId": "f73f1d45-808f-404f-911a-758d69aa147c",
+    "containerId": "",
+    "name": "playerId, gameId DELETE 2",
+    "url": "localhost:8001/ga/gameAttempt/3/4",
+    "method": "DELETE",
+    "sortNum": 100000,
+    "created": "2023-04-18T23:07:41.434Z",
+    "modified": "2023-04-18T23:07:41.434Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
+  },
+  {
+    "_id": "9664c7d8-4c45-42c4-94de-7e328ce84ab6",
+    "colId": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "containerId": "",
+    "name": "gameId GET 1",
+    "url": "localhost:8001/cl/clues/2",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-18T23:10:07.933Z",
+    "modified": "2023-04-18T23:10:07.933Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"clue\":\"Animal with a long, sticky tongue\",\"isDown\":0,\"valueColumn\":1,\"valueRow\":0},{\"clue\":\"Fictional character who travels to Mordor\",\"isDown\":1,\"valueColumn\":1,\"valueRow\":0},{\"clue\":\"Motorcycle user\",\"isDown\":1,\"valueColumn\":2,\"valueRow\":0},{\"clue\":\"It covers about 71% of the worlds surface\",\"isDown\":1,\"valueColumn\":3,\"valueRow\":0},{\"clue\":\"Hairstyling group\",\"isDown\":1,\"valueColumn\":4,\"valueRow\":0},{\"clue\":\"Most produced crop in China\",\"isDown\":0,\"valueColumn\":1,\"valueRow\":1},{\"clue\":\"You can make one for an airplane, or find one on the runway\",\"isDown\":0,\"valueColumn\":0,\"valueRow\":2},{\"clue\":\"Open ___ night\",\"isDown\":1,\"valueColumn\":0,\"valueRow\":2},{\"clue\":\"Result of brainstorming\",\"isDown\":0,\"valueColumn\":0,\"valueRow\":3},{\"clue\":\"Most produced crop in the United States\",\"isDown\":0,\"valueColumn\":0,\"valueRow\":4}]"
+      }
+    ]
+  },
+  {
+    "_id": "9fe7843f-aa3c-4486-a6ca-851ca465719f",
+    "colId": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "containerId": "",
+    "name": "gameId GET 2",
+    "url": "localhost:8001/cl/clues/3",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-18T23:10:18.684Z",
+    "modified": "2023-04-18T23:10:18.684Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"clue\":\"Most-used part of a ginger plant\",\"isDown\":1,\"valueColumn\":1,\"valueRow\":0},{\"clue\":\"Bad sound from a fan\",\"isDown\":0,\"valueColumn\":2,\"valueRow\":0},{\"clue\":\"The name-o of a nursery rhyme dog\",\"isDown\":1,\"valueColumn\":2,\"valueRow\":0},{\"clue\":\"Happen\",\"isDown\":1,\"valueColumn\":3,\"valueRow\":0},{\"clue\":\"Funny seeing you here\",\"isDown\":1,\"valueColumn\":4,\"valueRow\":0},{\"clue\":\"Well-off\",\"isDown\":0,\"valueColumn\":1,\"valueRow\":1},{\"clue\":\"Mollusk with pink shell\",\"isDown\":0,\"valueColumn\":0,\"valueRow\":2},{\"clue\":\"Major pharmacy chain\",\"isDown\":1,\"valueColumn\":0,\"valueRow\":2},{\"clue\":\"Fashion magazine headed by Anna Wintour\",\"isDown\":0,\"valueColumn\":0,\"valueRow\":3},{\"clue\":\"Journalists piece\",\"isDown\":0,\"valueColumn\":0,\"valueRow\":4}]"
+      }
+    ]
+  },
+  {
+    "_id": "f06347aa-dd44-4c94-9a1e-f4e2ac20aed6",
+    "colId": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "containerId": "",
+    "name": "gameId, row, col GET 1",
+    "url": "localhost:8001/cl/clues/3/0/1",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-04-18T23:14:50.415Z",
+    "modified": "2023-04-18T23:14:50.415Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"clue\":\"Most-used part of a ginger plant\",\"isDown\":1,\"valueColumn\":1,\"valueRow\":0}]"
+      }
+    ]
+  },
+  {
+    "_id": "09f3bea3-9a67-4804-95a1-137d1e0fd3ff",
+    "colId": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "containerId": "",
+    "name": "gameId, row, col GET 2",
+    "url": "localhost:8001/cl/clues/3/0/2",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-04-18T23:15:02.914Z",
+    "modified": "2023-04-18T23:15:02.914Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"clue\":\"Bad sound from a fan\",\"isDown\":0,\"valueColumn\":2,\"valueRow\":0},{\"clue\":\"The name-o of a nursery rhyme dog\",\"isDown\":1,\"valueColumn\":2,\"valueRow\":0}]"
+      }
+    ]
+  },
+  {
+    "_id": "c2c4b00c-ffc0-41ef-a05c-4bd3a329433b",
+    "colId": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "containerId": "",
+    "name": "gameId, row, col POST 1",
+    "url": "localhost:8001/cl/clues/3/10/10",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2023-04-18T23:15:13.615Z",
+    "modified": "2023-04-18T23:15:13.615Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"clue\": \"Hi\",\n  \"isDown\": 1\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Inserted"
+      }
+    ]
+  },
+  {
+    "_id": "870024c3-e499-4fc2-85bf-bfea69ee540d",
+    "colId": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "containerId": "",
+    "name": "gameId, row, col POST 2",
+    "url": "localhost:8001/cl/clues/3/11/11",
+    "method": "POST",
+    "sortNum": 60000,
+    "created": "2023-04-18T23:15:24.146Z",
+    "modified": "2023-04-18T23:15:24.146Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"clue\": \"Hi\",\n  \"isDown\": 1\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Inserted"
+      }
+    ]
+  },
+  {
+    "_id": "bf464bdd-95c3-4fb4-b312-b8ec2e83a27f",
+    "colId": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "containerId": "",
+    "name": "gameId, row, col PUT 1",
+    "url": "localhost:8001/cl/clues/3/11/11",
+    "method": "PUT",
+    "sortNum": 70000,
+    "created": "2023-04-18T23:15:36.530Z",
+    "modified": "2023-04-18T23:15:36.530Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"clue\": \"Peace\",\n  \"isDown\": 0\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "a22ad571-5417-4746-b0a9-36887be4ceca",
+    "colId": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "containerId": "",
+    "name": "gameId, row, col PUT 2",
+    "url": "localhost:8001/cl/clues/3/10/10",
+    "method": "PUT",
+    "sortNum": 80000,
+    "created": "2023-04-18T23:15:45.631Z",
+    "modified": "2023-04-18T23:15:45.631Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"clue\": \"Peace\",\n  \"isDown\": 0\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "5b84c3b7-ba0a-460b-aec4-a332b0f80d81",
+    "colId": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "containerId": "",
+    "name": "gameId, row, col DELETE 1",
+    "url": "localhost:8001/cl/clues/3/11/11",
+    "method": "DELETE",
+    "sortNum": 90000,
+    "created": "2023-04-18T23:15:58.829Z",
+    "modified": "2023-04-18T23:15:58.829Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
+  },
+  {
+    "_id": "d5ff49b7-d869-458a-b59a-c069c8fd1b03",
+    "colId": "011fa221-4b05-45b6-b0f6-88a9c70234c4",
+    "containerId": "",
+    "name": "gameId, row, col DELETE 2",
+    "url": "localhost:8001/cl/clues/3/10/10",
+    "method": "DELETE",
+    "sortNum": 100000,
+    "created": "2023-04-18T23:16:07.080Z",
+    "modified": "2023-04-18T23:16:07.080Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
+  },
+  {
+    "_id": "4fbf7af0-3336-4f0e-a68b-ff9be06e9818",
+    "colId": "66a0cb54-d875-4210-959c-805d64409299",
+    "containerId": "",
+    "name": "gameId GET 1",
+    "url": "localhost:8001/a/answers/1",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-18T23:18:15.682Z",
+    "modified": "2023-04-18T23:18:15.682Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"charValue\":\"s\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":0},{\"charValue\":\"t\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":2,\"valueRow\":0},{\"charValue\":\"e\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":3,\"valueRow\":0},{\"charValue\":\"m\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":4,\"valueRow\":0},{\"charValue\":\"t\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":1},{\"charValue\":\"r\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":2,\"valueRow\":1},{\"charValue\":\"i\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":3,\"valueRow\":1},{\"charValue\":\"p\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":4,\"valueRow\":1},{\"charValue\":\"d\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":0,\"valueRow\":2},{\"charValue\":\"o\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":2},{\"charValue\":\"u\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":2,\"valueRow\":2},{\"charValue\":\"g\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":3,\"valueRow\":2},{\"charValue\":\"h\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":4,\"valueRow\":2},{\"charValue\":\"i\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":0,\"valueRow\":3},{\"charValue\":\"n\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":3},{\"charValue\":\"c\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":2,\"valueRow\":3},{\"charValue\":\"h\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":3,\"valueRow\":3},{\"charValue\":\"m\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":0,\"valueRow\":4},{\"charValue\":\"e\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":4},{\"charValue\":\"e\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":2,\"valueRow\":4},{\"charValue\":\"t\",\"gameId\":1,\"gameName\":\"Crossword\",\"valueColumn\":3,\"valueRow\":4}]"
+      }
+    ]
+  },
+  {
+    "_id": "13de44dd-8f38-4217-ba44-dc04fa051883",
+    "colId": "66a0cb54-d875-4210-959c-805d64409299",
+    "containerId": "",
+    "name": "gameId GET 2",
+    "url": "localhost:8001/a/answers/2",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-18T23:18:24.146Z",
+    "modified": "2023-04-18T23:18:24.146Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"charValue\":\"f\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":0},{\"charValue\":\"r\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":2,\"valueRow\":0},{\"charValue\":\"o\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":3,\"valueRow\":0},{\"charValue\":\"g\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":4,\"valueRow\":0},{\"charValue\":\"r\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":1},{\"charValue\":\"i\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":2,\"valueRow\":1},{\"charValue\":\"c\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":3,\"valueRow\":1},{\"charValue\":\"e\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":4,\"valueRow\":1},{\"charValue\":\"m\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":0,\"valueRow\":2},{\"charValue\":\"o\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":2},{\"charValue\":\"d\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":2,\"valueRow\":2},{\"charValue\":\"e\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":3,\"valueRow\":2},{\"charValue\":\"l\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":4,\"valueRow\":2},{\"charValue\":\"i\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":0,\"valueRow\":3},{\"charValue\":\"d\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":3},{\"charValue\":\"e\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":2,\"valueRow\":3},{\"charValue\":\"a\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":3,\"valueRow\":3},{\"charValue\":\"c\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":0,\"valueRow\":4},{\"charValue\":\"o\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":4},{\"charValue\":\"r\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":2,\"valueRow\":4},{\"charValue\":\"n\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":3,\"valueRow\":4}]"
+      }
+    ]
+  },
+  {
+    "_id": "e6cbbab3-c77c-40b7-aa98-1311d3dfdfb2",
+    "colId": "66a0cb54-d875-4210-959c-805d64409299",
+    "containerId": "",
+    "name": "gameId, row, col GET 1",
+    "url": "localhost:8001/a/answers/2/0/1",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-04-18T23:22:34.727Z",
+    "modified": "2023-04-18T23:22:58.358Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "json-query",
+        "custom": "json",
+        "action": "equal",
+        "value": "[{\"charValue\":\"f\",\"gameId\":2,\"gameName\":\"Crossword\",\"valueColumn\":1,\"valueRow\":0}]"
+      }
+    ]
+  },
+  {
+    "_id": "52a51d14-9134-4bac-9f73-3fd10dd3fd3d",
+    "colId": "66a0cb54-d875-4210-959c-805d64409299",
+    "containerId": "",
+    "name": "gameId, row, col GET 2",
+    "url": "localhost:8001/a/answers/2/0/2",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-04-18T23:23:33.112Z",
+    "modified": "2023-04-18T23:23:33.112Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"charValue\": \"l\",\n  \"gameId\": 2,\n  \"gameName\": \"Crossword\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "6e337e5b-1ce2-4527-8bba-9e5349ce7d55",
+    "colId": "66a0cb54-d875-4210-959c-805d64409299",
+    "containerId": "",
+    "name": "gameId, row, col PUT 1",
+    "url": "localhost:8001/a/answers/2/0/2",
+    "method": "PUT",
+    "sortNum": 50000,
+    "created": "2023-04-18T23:23:49.043Z",
+    "modified": "2023-04-18T23:23:49.043Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"charValue\": \"l\",\n  \"gameId\": 2,\n  \"gameName\": \"Crossword\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "71a43a6d-e3c2-46dc-9c44-7886edca0d6d",
+    "colId": "66a0cb54-d875-4210-959c-805d64409299",
+    "containerId": "",
+    "name": "gameId, row, col GET 2",
+    "url": "localhost:8001/a/answers/2/0/1",
+    "method": "PUT",
+    "sortNum": 60000,
+    "created": "2023-04-18T23:23:58.461Z",
+    "modified": "2023-04-18T23:23:58.461Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"charValue\": \"w\",\n  \"gameId\": 2,\n  \"gameName\": \"Crossword\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "7d2de8f6-f229-40ff-bcef-27ac8089502f",
+    "colId": "66a0cb54-d875-4210-959c-805d64409299",
+    "containerId": "",
+    "name": "gameId, row, col DELETE 1",
+    "url": "localhost:8001/a/answers/2/0/1",
+    "method": "DELETE",
+    "sortNum": 70000,
+    "created": "2023-04-18T23:24:10.877Z",
+    "modified": "2023-04-18T23:24:10.877Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
+  },
+  {
+    "_id": "9fa146e5-0669-4853-8e20-6d645aa254bf",
+    "colId": "66a0cb54-d875-4210-959c-805d64409299",
+    "containerId": "",
+    "name": "gameId, row, col DELETE 2",
+    "url": "localhost:8001/a/answers/2/0/2",
+    "method": "DELETE",
+    "sortNum": 80000,
+    "created": "2023-04-18T23:24:18.410Z",
+    "modified": "2023-04-18T23:24:18.410Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Deleted"
+      }
+    ]
+  },
+  {
+    "_id": "186ba190-e040-4294-9d77-e6e515d2fe32",
+    "colId": "66a0cb54-d875-4210-959c-805d64409299",
+    "containerId": "",
+    "name": "BULK PUT",
+    "url": "localhost:8001/a/answers/bulk/1/Crossword",
+    "method": "PUT",
+    "sortNum": 90000,
+    "created": "2023-04-18T23:26:42.959Z",
+    "modified": "2023-04-18T23:26:42.959Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"answers\": [\n    \"m\",\n    \"o\",\n    \"p\",\n    \"\",\n    \"\",\n    \"c\",\n    \"h\",\n    \"e\",\n    \"f\",\n    \"s\",\n    \"a\",\n    \"i\",\n    \"l\",\n    \"e\",\n    \"t\",\n    \"o\",\n    \"t\",\n    \"a\",\n    \"l\",\n    \"\",\n    \"\",\n    \"o\",\n    \"w\",\n    \"l\"\n  ]\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  }
+]

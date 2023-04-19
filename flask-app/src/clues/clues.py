@@ -1,6 +1,4 @@
-from flask import Blueprint, request, jsonify, make_response, current_app
-import json
-from src import db
+from flask import Blueprint, request
 from utils import submit_query, get_query
 
 clues = Blueprint('clues', __name__)

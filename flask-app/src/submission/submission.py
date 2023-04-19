@@ -58,7 +58,6 @@ def calc_num_incorrect(attemptId, submissionNumber):
 @submission.route('/submission/<submissionNumber>/<attemptId>', methods=['PUT'])
 def put_player_game_submission_num(submissionNumber, attemptId):
     the_data = request.json
-    submissionNumber = the_data["submissonNumber"]
     attemptId = the_data["attemptId"]
     numIncorrect = calc_num_incorrect(attemptId, submissionNumber)
 
