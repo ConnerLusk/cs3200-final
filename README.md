@@ -46,7 +46,7 @@ For this project our group chose to create a one stop shop for word games. The f
 <a>https://drive.google.com/file/d/11WfpIVcnboYL5pDtRS52nKKbLa-kQp6C/view?usp=sharing</a>
 
 ## Side Notes
-Gus had a problem with his github where his commits are not shown in the contributers section. I you look in the pulse page on the insights tab you can see that he commited and also in the commit log you can see he commited many times. This is true for both the appsmith repo and this repo. Also the appsmith repo "main" branch is jack-branch not main.
+Gus had a problem with his github where his commits are not shown in the contributers section. If you look in the pulse page on the insights tab you can see that he commited and also in the commit log you can see he commited many times. This is true for both the appsmith repo and this repo. Also the appsmith repo "main" branch is jack-branch not main.
 
 
 
