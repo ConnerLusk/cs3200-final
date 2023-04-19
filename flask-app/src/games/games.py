@@ -13,6 +13,9 @@ def game_name(name):
     if request.method == 'GET':
         return get_query(f"SELECT * FROM Game WHERE gameName = '{name}';")
     
+    elif request.method == "DELETE":
+        return submit_query(f"DELETE FROM Game WHERE gameName = '{name}';", 'Deleted')
+    
 @games.route('/game/<name>/<difficulty>/<projName>', methods=['GET','POST'])
 def specific_game(name,difficulty,projName):
     if request.method == 'GET':
