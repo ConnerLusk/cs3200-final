@@ -710,23 +710,10 @@
     "method": "DELETE",
     "sortNum": 0,
     "created": "2023-04-18T22:56:37.091Z",
-    "modified": "2023-04-18T22:56:37.091Z",
+    "modified": "2023-04-19T14:29:35.186Z",
     "headers": [],
     "params": [],
-    "tests": [
-      {
-        "type": "res-code",
-        "custom": "",
-        "action": "equal",
-        "value": "400"
-      },
-      {
-        "type": "res-body",
-        "custom": "",
-        "action": "equal",
-        "value": "Loser"
-      }
-    ]
+    "tests": []
   },
   {
     "_id": "c3928e49-011d-4a09-8490-a347eff1fd67",
