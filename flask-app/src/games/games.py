@@ -4,7 +4,7 @@ from utils import get_query, submit_query
 games = Blueprint('game', __name__)
 
 @games.route('/game', methods=['GET'])
-def game_name():
+def game_names():
     if request.method == 'GET':
         return get_query(f"SELECT gameId FROM Game;")
 
