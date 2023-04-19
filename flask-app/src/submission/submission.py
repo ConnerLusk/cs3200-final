@@ -67,3 +67,9 @@ def put_player_game_submission_num(submissionNumber, attemptId):
     return submit_query(query, "Updated")
 
 
+@submission.route('/submission/<submissionNumber>/', methods=['DELETE'])
+def delete_game_submission(submissionNumber):
+
+    query = f"DELETE FROM Submission WHERE submissionNumber = {submissionNumber};"
+    
+    return submit_query(query, "Deleted")

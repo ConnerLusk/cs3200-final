@@ -49,7 +49,7 @@ def get_player(playerID):
         # generate query
         query = f"UPDATE Player SET isPremium = '{str(premium)}',"
         query += f"fName = '{fname}', lname = '{lname}', email = '{email}', birthday ='{birthday}'"
-        query += f"WHERE playerID = {0}".format(playerID)
+        query += f"WHERE playerID = {playerID}"
         
         return submit_query(query, "Updated")
   
