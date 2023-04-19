@@ -1,5 +1,8 @@
-from flask import Blueprint, request
-from utils import get_query, submit_query
+from flask import Blueprint, request, jsonify, make_response
+import json
+from src import db
+from utils import get_query 
+from utils import  submit_query
 
 
 players = Blueprint('players', __name__)
@@ -10,13 +13,8 @@ def get_players():
     query = 'SELECT fname, lname FROM Player;'
     return get_query(query)
 
-# Delete, fetch, or update a specific player
-@players.route('/players/<playerID>', methods= ['GET','POST','PUT','DELETE'])
-def get_player(playerID):
-    if request.method == "GET":
-        query = 'SELECT * FROM Player where playerID = {0};'.format(playerID)
-        return get_query(query)
-    elif request.method == "POST":
+@players.route('/players', methods=['POST'])
+def create_player():
 
         the_data = request.json
 
@@ -26,15 +24,19 @@ def get_player(playerID):
         email = the_data['email']
         birthday = the_data['birthday']
 
-        query = 'INSERT into Player (isPremium, fName, lName, email, birthday) values ('
-        query += str(premium) + ","
-        query += fname + ","
-        query += lname + ","
-        query += email + ","
-        query += str(birthday) + ');'
+        query = 'INSERT into Player (isPremium, fName, lName, email, birthday) VALUES ('
+        query += f"{premium}, '{fname}', '{lname}', '{email}', '{birthday}')"
 
         return submit_query(query, "Inserted")
-  
+
+# Delete, fetch, or update a specific player
+@players.route('/players/<playerID>', methods= ['GET','PUT','DELETE'])
+def get_player(playerID):
+
+    if request.method == "GET":
+        query = 'SELECT * FROM Player where playerID = {0};'.format(playerID)
+        return get_query(query)
+    
     elif request.method == "PUT":
         the_data = request.json
 
@@ -46,7 +48,8 @@ def get_player(playerID):
 
         # generate query
         query = f"UPDATE Player SET isPremium = '{str(premium)}',"
-        query += f" fName = '{fname}', lname = '{lname}', email = {email}, birthday = '{str(birthday)}';"
+        query += f"fName = '{fname}', lname = '{lname}', email = '{email}', birthday ='{birthday}'"
+        query += f"WHERE playerID = {0}".format(playerID)
         
         return submit_query(query, "Updated")
   
