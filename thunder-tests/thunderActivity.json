@@ -62,23 +62,10 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-04-18T22:34:32.499Z",
-    "modified": "2023-04-18T22:34:37.090Z",
+    "modified": "2023-04-19T01:00:36.353Z",
     "headers": [],
     "params": [],
-    "tests": [
-      {
-        "type": "res-code",
-        "custom": "",
-        "action": "equal",
-        "value": "200"
-      },
-      {
-        "type": "json-query",
-        "custom": "json",
-        "action": "equal",
-        "value": "[]"
-      }
-    ]
+    "tests": []
   },
   {
     "_id": "eaa01196-1826-423f-9516-75f106635265",
@@ -2044,28 +2031,10 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-04-18T23:27:40.627Z",
-    "modified": "2023-04-18T23:27:40.627Z",
+    "modified": "2023-04-19T00:49:16.904Z",
     "headers": [],
     "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{\n  \"answers\": [\n    \"m\",\n    \"o\",\n    \"p\",\n    \"\",\n    \"\",\n    \"c\",\n    \"h\",\n    \"e\",\n    \"f\",\n    \"s\",\n    \"a\",\n    \"i\",\n    \"l\",\n    \"e\",\n    \"t\",\n    \"o\",\n    \"t\",\n    \"a\",\n    \"l\",\n    \"\",\n    \"\",\n    \"o\",\n    \"w\",\n    \"l\"\n  ]\n}",
-      "form": []
-    },
-    "tests": [
-      {
-        "type": "res-code",
-        "custom": "",
-        "action": "equal",
-        "value": "200"
-      },
-      {
-        "type": "res-body",
-        "custom": "",
-        "action": "equal",
-        "value": "Updated"
-      }
-    ]
+    "tests": []
   },
   {
     "_id": "cb35db8f-6943-432f-898a-af6ca3ab45c8",
@@ -2098,5 +2067,70 @@
         "value": "Updated"
       }
     ]
+  },
+  {
+    "_id": "4eb81bda-f2f9-494c-912d-1f7b2b431f78",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8001/g/game",
+    "url": "localhost:8001/g/game",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-19T00:32:28.376Z",
+    "modified": "2023-04-19T00:33:16.772Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"answers\": [\n    \"m\",\n    \"o\",\n    \"p\",\n    \"\",\n    \"\",\n    \"c\",\n    \"h\",\n    \"e\",\n    \"f\",\n    \"s\",\n    \"a\",\n    \"i\",\n    \"l\",\n    \"e\",\n    \"t\",\n    \"o\",\n    \"t\",\n    \"a\",\n    \"l\",\n    \"\",\n    \"\",\n    \"o\",\n    \"w\",\n    \"l\"\n  ]\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "res-body",
+        "custom": "",
+        "action": "equal",
+        "value": "Updated"
+      }
+    ]
+  },
+  {
+    "_id": "735732e2-692e-4357-ba0c-008f81e3d9e2",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8001/pl/players",
+    "url": "localhost:8001/pl/players",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-04-19T00:49:37.097Z",
+    "modified": "2023-04-19T00:53:23.997Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"birthday\": \"1990-10-10\",\n  \"email\": \"ghatzar0@usa.gov\",\n  \"fName\": \"Gunther\",\n  \"isPremium\": 0,\n  \"lName\": \"Hatzar\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "683339d8-f16f-4b23-a6c6-a1100637deb2",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8001/s/submission/1/4",
+    "url": "localhost:8001/s/submission/1/4",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-04-19T01:02:06.427Z",
+    "modified": "2023-04-19T01:20:54.103Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
