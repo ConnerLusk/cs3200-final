@@ -39,6 +39,7 @@ def get_player_game_submission_num(playerId, gameId, submissionNumber):
     '''
     return get_query(query)
 
+# adding calculator for this 
 def calc_num_incorrect(attemptId, submissionNumber):
     count = 0
     rows = [1,2,3,4,5]
